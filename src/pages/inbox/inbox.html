@@ -8,6 +8,7 @@
 
 <ion-content padding>
   <h1>Inbox</h1>
+  <span>Last Updated at : </span> <span [innerHtml]="refreshTime | date:'hh:mm a'"></span>
   <ion-refresher (ionRefresh)="doRefresh($event)">
    <ion-refresher-content></ion-refresher-content>
  </ion-refresher>

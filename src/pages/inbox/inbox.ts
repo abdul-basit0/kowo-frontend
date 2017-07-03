@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: 'inbox.html'
 })
 export class InboxPage {
+  refreshTime;
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
-    console.log('Begin async operation', new Date(refresher._lastCheck));
+    // console.log('Begin async operation', new Date(refresher._lastCheck).getTime);
+    this.refreshTime = new Date(refresher._lastCheck).toLocaleString();
+
 
 
     setTimeout(() => {
