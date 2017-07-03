@@ -1,8 +1,36 @@
 body {
-  .scroll-content {
+  .fixed-content {
     background-image: url('../assets/image/background.png');
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .scroll-content {
+    border-top: none !important;
+    background-color: transparent !important;
+  }
+
+  .childrenList {
+        padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    li {
+      padding-left: 16px;
+      border-bottom: 1px solid #ddd;
+      list-style-type: none;
+      line-height: 38px;
+      padding-top: 0;
+      padding-bottom: 0;
+      transition: 0.09s all linear;
+      a {
+        font-family: 'ubuntulight', sans-serif;
+        letter-spacing: 0.8px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.8em;
+        text-transform: uppercase;
+      }
+    }
   }
 
 }
@@ -209,7 +237,14 @@ body {
 }
 
 .sideMenuMain {
-  background-color: #4ac7cc;
+  button {
+      background-color: #4ac7cc;
+  }
+
+  div.item-inner {
+    border-bottom: none !important;
+  }
+
 
   .menuItemTitle,
   .sidemenuIcons {
@@ -218,6 +253,7 @@ body {
 }
 
 .sideMenuMain {
+  border-bottom: 1px solid #ddd;
   .menuItemTitle {
         padding: 6%;
     font-size: 13px;
@@ -251,7 +287,7 @@ body {
 
 .sideMenuMainContent {
   .scroll-content {
-    background-color: #4ac7cc;
+    background-color: #4ac7cc !important;
     background-image: none !important;
 
   }

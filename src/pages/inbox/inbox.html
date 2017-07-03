@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar> <!-- color = "red"-->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Inbox</h1>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+   <ion-refresher-content></ion-refresher-content>
+ </ion-refresher>
+</ion-content>

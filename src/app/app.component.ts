@@ -4,29 +4,33 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { InboxPage } from '../pages/inbox/inbox';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  isVisible = false;
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any, image: string}>;
+
+  pages: Array<{title: string, component: any, image: string, child: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
+
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Create A Ride', component: '' , image : 'icon-driver'},
-      { title: 'My Settings', component: '' , image :'icon-settings'},
-      { title: 'All my rides', component: '', image : 'icon-my-rides'},
-      { title: 'My Inbox', component: '', image : 'icon-inbox' },
-      { title: 'Send Evidence', component: '', image :'icon-send-evidence'},
-      { title: 'Log Out', component: '', image : 'icon-logout'}
+      { title: 'Create A Ride', component: HomePage , image : 'icon-driver', child: ''},
+      { title: 'My Settings', component: '' , image :'icon-settings', child: ['My Profile','Manage Rating','Contact Us']},
+      { title: 'All my rides', component: '', image : 'icon-my-rides',child: ''},
+      { title: 'My Inbox', component: InboxPage, image : 'icon-inbox' ,child: ''},
+      { title: 'Send Evidence', component: '', image :'icon-send-evidence',child: ''},
+      { title: 'Log Out', component: '', image : 'icon-logout',child: ''}
     ];
 
   }
@@ -38,6 +42,9 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  showChildren() {
+    this.isVisible = !this.isVisible;
   }
 
   openPage(page) {
