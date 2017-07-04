@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { NavController } from 'ionic-angular';
+ import { NavController } from 'ionic-angular';
 
 
 @Component({
@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: 'inbox.html'
 })
 export class InboxPage {
+
+
   refreshTime;
+  constructor(public navCtrl: NavController) {
+
+  }
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
     // console.log('Begin async operation', new Date(refresher._lastCheck).getTime);
@@ -20,5 +25,8 @@ export class InboxPage {
       refresher.complete();
     }, 2000);
   }
+  goBack(){
+  this.navCtrl.pop();
+}
 
 }
