@@ -1,0 +1,39 @@
+<ion-content padding>
+  <div class="loginScreen">
+    <ion-select [(ngModel)]="language">
+      <ion-option *ngFor="let lang of languages" value="{{lang.value}}" [selected]="(lang.value == selectedLang) ? true : null">{{lang.language}}</ion-option>
+    </ion-select>
+
+
+    <div class="loginScreenLogo">
+      <img src="assets/image/logo.png" alt="main-icon">
+    </div>
+    <form (ngSubmit)="ok()">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+              <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <ion-input type="password" placeholder="Password"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <a href="#" class="link">Forgot Your Password?</a>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 class="buttonValidate">
+              <button ion-button >Validate</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+
+    </form>
+  </div>
+</ion-content>
