@@ -1,0 +1,118 @@
+page-login {
+  font-size: 15px;
+  font-family: 'ubuntulight', sans-serif;
+  letter-spacing: 0.8px;
+
+  .loginScreen {
+    text-align: center;
+
+    .loginScreenLogo {
+      img {
+        height: 60px;
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-family: 'ubunturegular';
+      color: #4ac7cc;
+      font-size: 1em;
+    }
+
+    .link {
+      margin-top: 10px;
+      color: #2a7a7d;
+      text-decoration: underline;
+    }
+
+    .medium {
+      font-family: 'ubuntumedium';
+    }
+
+    .link--bigger {
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+
+    .text-input {
+      box-sizing: content-box;
+      text-align: center;
+      background-color: #4ac7cc;
+      padding: 13px 8px !important;
+      color: #fff;
+      margin: 0 !important;
+    }
+
+    .buttonValidate {
+      button {
+        width: 100%;
+        margin: 30px 0 10px;
+        padding: 0;
+        background-color: #2a7a7d;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 0;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: #2a7a7d !important;
+        }
+      }
+    }
+
+    .item-md {
+      background: transparent !important;
+    }
+
+    .item-inner {
+      padding-right: 0 !important;
+      border-bottom: none !important;
+    }
+
+    ion-select {
+      max-width: 100% !important;
+      color: #2a7a7d;
+      border: none;
+
+      .select-icon-inner {
+        color: #2a7a7d !important;
+      }
+    }
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #fff;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #fff;
+    }
+
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: #fff;
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: #fff;
+    }
+
+    .item-button {
+      width: 100%;
+      padding: 0;
+      background-color: #2a7a7d;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 0;
+      border-radius: 2px;
+      height: 40px;
+    }
+
+    ion-label {
+      text-align: center;
+    }
+  }
+}
+//End of main element

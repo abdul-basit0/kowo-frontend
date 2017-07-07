@@ -1,0 +1,57 @@
+<ion-content padding>
+  <div class="loginScreen">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-md-5 c>
+        </ion-col>
+        <ion-col col-md-2 col-sm-12 col-xs-12>
+            <ion-select [(ngModel)]="language">
+              <ion-option *ngFor="let lang of languages" value="{{lang.value}}" [selected]="(lang.value == selectedLang) ? true : null">{{lang.language}}</ion-option>
+            </ion-select>
+        </ion-col>
+        <ion-col col-md-5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <div class="loginScreenLogo">
+      <img src="assets/image/logo.png" alt="main-icon">
+    </div>
+    <h2>Sign In</h2>
+    <form >
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+              <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <ion-input type="password" placeholder="Password"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <a href="#" class="link" (click)="showAlert()">Forgot Your Password?</a>
+
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 class="buttonValidate">
+              <button ion-button [navPush]="homepage" >Validate</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <a href="#" class="link link--bigger medium">Register</a>
+      <button ion-button (click)="takePicture()">Take Picture</button>
+
+       <img [src]="base64Image" *ngIf="base64Image" />
+
+
+
+    </form>
+  </div>
+</ion-content>

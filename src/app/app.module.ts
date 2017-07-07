@@ -9,6 +9,10 @@ import { SignUpIPage } from '../pages/signupI/signupI';
 import { SignUpIIPage } from '../pages/signupII/signupII';
 import { SignUpIIIPage } from '../pages/signupIII/signupIII';
 import { createRidePage } from '../pages/createRide/createRide';
+import { AuthPage } from '../pages/auth/login';
+import { SettingsPage } from '../pages/settings/settings';
+
+// import { Router } from '@angular/router';
 
 import { NativeGeocoder} from '@ionic-native/native-geocoder';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,7 +28,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignUpIPage,
     SignUpIIPage,
     SignUpIIIPage,
-    createRidePage
+    createRidePage,
+    AuthPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignUpIPage,
     SignUpIIPage,
     SignUpIIIPage,
-    createRidePage
+    createRidePage,
+    AuthPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
