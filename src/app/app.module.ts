@@ -4,19 +4,31 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { InboxPage } from '../pages/inbox/inbox';
+import { SignUpPage } from '../pages/signup/signup';
+import { SignUpIPage } from '../pages/signupI/signupI';
+import { SignUpIIPage } from '../pages/signupII/signupII';
+import { SignUpIIIPage } from '../pages/signupIII/signupIII';
+import { createRidePage } from '../pages/createRide/createRide';
 import { AuthPage } from '../pages/auth/login';
 import { SettingsPage } from '../pages/settings/settings';
-import { IonPullupModule } from 'ionic-pullup';
+
 // import { Router } from '@angular/router';
 
+import { NativeGeocoder} from '@ionic-native/native-geocoder';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { IonPullupModule } from 'ionic-pullup';
+import { Geolocation } from '@ionic-native/geolocation';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     InboxPage,
+    SignUpPage,
+    SignUpIPage,
+    SignUpIIPage,
+    SignUpIIIPage,
+    createRidePage,
     AuthPage,
     SettingsPage
   ],
@@ -30,12 +42,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     InboxPage,
+    SignUpPage,
+    SignUpIPage,
+    SignUpIIPage,
+    SignUpIIIPage,
+    createRidePage,
     AuthPage,
     SettingsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    NativeGeocoder,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
