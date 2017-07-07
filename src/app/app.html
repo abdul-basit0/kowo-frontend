@@ -8,15 +8,15 @@
   <ion-content>
     <ion-list>
       <div  *ngFor="let p of pages" class="sideMenuMain">
-        <button ion-item (click)="p.child.length ? showChildren(): openPage(p)"  [attr.menuClose]="!p.child.length ? '' : null">
+        <button ion-item (click)="p.child.length>1 ? showChildren(): openPage(p)"  [attr.menuClose]="!p.child.length>1 ? '' : null">
           <div class="sidemenuIcons">
             <i class="{{p.image + ' kowoIconFamily'}}"></i>
           </div>
           <p [innerHtml]="p.title" class="menuItemTitle"></p>
         </button>
-        <div *ngIf="p.child.length" [hidden] = "!isVisible"  >
+        <div *ngIf="p.child.length>1" [hidden] = "!isVisible"  >
           <ul class="childrenList">
-          <li *ngFor="let children of p.child" ><a href="#" [innerHtml]="children" menuClose></a></li>
+          <li *ngFor="let children of p.child" ><a href="#" (click)="openChild(children)"[innerHtml]="children.name" menuClose></a></li>
 
           </ul>
         </div>

@@ -12,10 +12,26 @@ page-login {
       }
     }
 
+    h2 {
+      text-transform: uppercase;
+      font-family: 'ubunturegular';
+      color: #4ac7cc;
+      font-size: 1em;
+    }
+
     .link {
       margin-top: 10px;
       color: #2a7a7d;
       text-decoration: underline;
+    }
+
+    .medium {
+      font-family: 'ubuntumedium';
+    }
+
+    .link--bigger {
+      text-transform: uppercase;
+      font-size: 1.2em;
     }
 
     .text-input {
@@ -37,6 +53,7 @@ page-login {
         text-transform: uppercase;
         border-radius: 0;
         border-radius: 2px;
+
         &:hover {
           background-color: #2a7a7d !important;
         }
