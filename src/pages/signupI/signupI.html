@@ -1,0 +1,55 @@
+
+
+
+
+    <ion-content padding>
+        <div class="content content--smaller flex flex--column justify--center">
+          <div class="registerLogo"><img src="assets/image/logo.png" alt="main-icon"></div>
+            <h2 align="center"> Register</h2>
+            <div class="steps-container">
+              <div class="steps flex justify--center">
+                  <div class="steps__bullet"></div>
+                  <div class="steps__bullet active"></div>
+                  <div class="steps__bullet"></div>
+                  <div class="steps__bullet"></div>
+              </div>
+            </div>
+            <form (ngSubmit)="logForm()">
+
+              <ion-grid>
+
+                <ion-row>
+                  <ion-col col-12>
+
+                      <ion-input type="password" value="" placeholder="Password"></ion-input>
+
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col col-12>
+
+                      <ion-input type="password" value="" placeholder="Confirm Password"></ion-input>
+
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col col-12 class="buttonValidate">
+
+                          <button ion-button type="submit" block>validate</button>
+
+                  </ion-col>
+                </ion-row>
+
+              </ion-grid>
+
+
+
+    </form>
+
+          </div>
+
+
+
+          </ion-content>

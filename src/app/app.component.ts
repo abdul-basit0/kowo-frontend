@@ -65,44 +65,39 @@ export class MyApp {
         }]
       },
 
+      {
 
-     {
         title: 'Sign Up', component: SignUpPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
+      {
 
-     {
         title: 'Sign Up I', component: SignUpIPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
-     {
+      {
         title: 'Sign Up II', component: SignUpIIPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
-     {
+      {
         title: 'Sign Up III', component: SignUpIIIPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
-     {
+      {
         title: 'Create Ride', component: createRidePage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
-
-     {
+      {
         title: 'Send Evidence', component: '', image: 'icon-send-evidence', child: [{
           name: '',
           link: ''
@@ -114,8 +109,7 @@ export class MyApp {
           link: ''
         }]
       }
-
-   ];
+    ];
 
  }
 
