@@ -5,6 +5,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { InboxPage } from '../pages/inbox/inbox';
+import { SignUpPage } from '../pages/signup/signup';
+import { SignUpIPage } from '../pages/signupI/signupI';
+import { SignUpIIPage } from '../pages/signupII/signupII';
+import { SignUpIIIPage } from '../pages/signupIII/signupIII';
+import { createRidePage } from '../pages/createRide/createRide';
+
 
 
 @Component({
@@ -30,7 +36,15 @@ export class MyApp {
       { title: 'All my rides', component: '', image : 'icon-my-rides',child: ''},
       { title: 'My Inbox', component: InboxPage, image : 'icon-inbox' ,child: ''},
       { title: 'Send Evidence', component: '', image :'icon-send-evidence',child: ''},
-      { title: 'Log Out', component: '', image : 'icon-logout',child: ''}
+      { title: 'Log Out', component: '', image : 'icon-logout',child: ''},
+      { title: 'Sign Up', component: SignUpPage, image : 'icon-logout',child: ''},
+      { title: 'Sign Up I', component: SignUpIPage, image : 'icon-logout',child: ''},
+      { title: 'Sign Up II', component: SignUpIIPage, image : 'icon-logout',child: ''},
+      { title: 'Sign Up III', component: SignUpIIIPage, image : 'icon-logout',child: ''},
+      { title: 'Create Ride', component: createRidePage, image : 'icon-logout',child: ''}
+
+
+
     ];
 
   }

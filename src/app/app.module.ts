@@ -4,16 +4,27 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { InboxPage } from '../pages/inbox/inbox';
-import { IonPullupModule } from 'ionic-pullup';
+import { SignUpPage } from '../pages/signup/signup';
+import { SignUpIPage } from '../pages/signupI/signupI';
+import { SignUpIIPage } from '../pages/signupII/signupII';
+import { SignUpIIIPage } from '../pages/signupIII/signupIII';
+import { createRidePage } from '../pages/createRide/createRide';
 
+import { NativeGeocoder} from '@ionic-native/native-geocoder';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { IonPullupModule } from 'ionic-pullup';
+import { Geolocation } from '@ionic-native/geolocation';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    InboxPage
+    InboxPage,
+    SignUpPage,
+    SignUpIPage,
+    SignUpIIPage,
+    SignUpIIIPage,
+    createRidePage
   ],
   imports: [
     BrowserModule,
@@ -24,11 +35,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    InboxPage
+    InboxPage,
+    SignUpPage,
+    SignUpIPage,
+    SignUpIIPage,
+    SignUpIIIPage,
+    createRidePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    NativeGeocoder,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

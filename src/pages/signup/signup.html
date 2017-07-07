@@ -1,0 +1,105 @@
+
+
+
+
+    <ion-content padding>
+        <div class="content content--smaller flex flex--column justify--center">
+          <div class="registerLogo"><img src="assets/image/logo.png" alt="main-icon"></div>
+            <h2 align="center"> Register</h2>
+            <div class="steps-container">
+              <div class="steps flex justify--center">
+                  <div class="steps__bullet active"></div>
+                  <div class="steps__bullet"></div>
+                  <div class="steps__bullet"></div>
+                  <div class="steps__bullet"></div>
+              </div>
+            </div>
+            <form (ngSubmit)="logForm()">
+
+              <ion-grid>
+                <ion-row radio-group>
+
+                  <ion-col col-12>
+                    <div class="radio">
+
+                    <ion-radio checked="true" value="male" float class="radio-custom"></ion-radio>
+                    <ion-label class="radio__label" value="male">Male </ion-label>
+
+                    &nbsp;&nbsp;&nbsp;
+                    <ion-radio  value="female">
+
+
+                    </ion-radio>
+                    <ion-label class="radio__label">Female</ion-label>
+
+                  </div>
+
+
+                   </ion-col>
+                </ion-row>
+
+
+                <ion-row>
+                  <ion-col col-12>
+
+                    <select class="dropDownMen">
+                      <option value="en">English</option>
+                      <option value="fr">French</option>
+                      <option value="dl">Dutch</option>
+
+                    </select>
+
+                </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col col-12>
+
+                      <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
+
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col col-12>
+
+                        <ion-input type="text" placeholder="First Name"></ion-input>
+
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col col-12>
+
+                      <ion-input type="text" placeholder="Last Name"></ion-input>
+
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col col-12>
+
+                      <ion-input type="text" placeholder="Phone Number" ></ion-input>
+
+                  </ion-col>
+                </ion-row>
+
+                <ion-row>
+                  <ion-col col-12 class="buttonValidate">
+
+                          <button ion-button type="submit" block>validate</button>
+
+                  </ion-col>
+                </ion-row>
+
+              </ion-grid>
+
+
+
+    </form>
+
+          </div>
+
+
+
+          </ion-content>
