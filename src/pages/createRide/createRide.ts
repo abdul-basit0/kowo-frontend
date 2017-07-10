@@ -10,16 +10,24 @@ import { NativeGeocoder, NativeGeocoderReverseResult} from '@ionic-native/native
 })
 export class createRidePage {
   public position: string;
-  public address: string;
+  public homeAddress: string;
+  public workAddress: string;
   constructor(public navCtrl: NavController, private geolocation: Geolocation, private nativeGeocoder: NativeGeocoder) {
 
   }
 
-  getCurrLocation() {
+  getCurrLocationHome() {
     this.geolocation.getCurrentPosition().then((resp) => {
       console.log(resp.coords.latitude);
       console.log(resp.coords.longitude);
       this.position = resp.coords.latitude + "|" + resp.coords.longitude;
+
+      this.nativeGeocoder.reverseGeocode(resp.coords.latitude, resp.coords.longitude)
+        .then((result: NativeGeocoderReverseResult) => {
+          this.homeAddress = result.street + ", " + result.district + ", " + result.city + ", " + result.countryName;
+          console.log("Result -> ", result);
+          console.log('The address is ' + result.street + ' in ' + result.countryCode)
+        }).catch((error: any) => console.log(error));
 
 
     }).catch((error) => {
@@ -30,16 +38,28 @@ export class createRidePage {
 
   }
 
-  getAddress() {
-    this.nativeGeocoder.reverseGeocode(33.5857793, 73.0877285)
-      .then((result: NativeGeocoderReverseResult) => {
-        this.address = result.street + ", " + result.district + ", " + result.city + ", " + result.countryName;
-        console.log("Result -> ", result);
-        console.log('The address is ' + result.street + ' in ' + result.countryCode)
-      }).catch((error: any) => console.log(error));
+  getCurrLocationWork() {
+    this.geolocation.getCurrentPosition().then((resp) => {
+      console.log(resp.coords.latitude);
+      console.log(resp.coords.longitude);
+      this.position = resp.coords.latitude + "|" + resp.coords.longitude;
+
+      this.nativeGeocoder.reverseGeocode(resp.coords.latitude, resp.coords.longitude)
+        .then((result: NativeGeocoderReverseResult) => {
+          this.workAddress = result.street + ", " + result.district + ", " + result.city + ", " + result.countryName;
+          console.log("Result -> ", result);
+          console.log('The address is ' + result.street + ' in ' + result.countryCode)
+        }).catch((error: any) => console.log(error));
+
+
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
 
 
 
   }
+
+
 
 }

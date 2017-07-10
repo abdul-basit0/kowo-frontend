@@ -57,6 +57,64 @@ page-createRide {
 text-align:center;
 
 }
+
+.checkbox-md .checkbox-icon {
+
+    border:2px solid grey !important;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+}
+.checkbox-md .checkbox-checked .checkbox-inner {
+    border-color: grey;
+    left: 8px;
+    top: 3px;
+    width: 7px;
+    height: 15px;
+}
+
+.iconLeft{
+
+text-align: left;
+background-color:#4ac7cc;
+color:white;
+  font-size: 0.9em;
+}
+
+.iconRight{
+
+text-align: right;
+background-color:#4ac7cc;
+font-size: 0.9em;
+
+color:white;
+
+}
+.inputGeo{
+
+  display:inline-block;
+  width:90%;
+}
+.geo{
+
+  background-color:#4ac7cc;
+}
+
+.rightIcon{
+text-align: right;
+background-color:#4ac7cc;
+color:white;
+
+}
+.checkbox_align{
+  text-align:center;
+}
+
+.checkbox-md .checkbox-checked {
+    border-color: grey;
+    background-color: white;
+}
+
 .checkSpan{
 
   min-width:35px;
