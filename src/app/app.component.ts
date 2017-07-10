@@ -21,16 +21,16 @@ export class MyApp {
   isVisible = false;
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+ rootPage: any = HomePage;
 
 
-  pages: Array<{ title: string, component: any, image: string, child: [{ name: string, link: any }] }>;
+ pages: Array<{ title: string, component: any, image: string, child: [{ name: string, link: any }] }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+ constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
 
-    // used for an example of ngFor and navigation
+   // used for an example of ngFor and navigation
     this.pages = [
       {
         title: 'Create A Ride', component: HomePage, image: 'icon-driver', child: [{
@@ -65,43 +65,38 @@ export class MyApp {
         }]
       },
 
-
       {
+
         title: 'Sign Up', component: SignUpPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
       {
+
         title: 'Sign Up I', component: SignUpIPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
       {
         title: 'Sign Up II', component: SignUpIIPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
       {
         title: 'Sign Up III', component: SignUpIIIPage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
       {
         title: 'Create Ride', component: createRidePage, image: 'icon-inbox', child: [{
           name: '',
           link: ''
         }]
       },
-
-
       {
         title: 'Send Evidence', component: '', image: 'icon-send-evidence', child: [{
           name: '',
@@ -114,12 +109,11 @@ export class MyApp {
           link: ''
         }]
       }
-
     ];
 
-  }
+ }
 
-  initializeApp() {
+ initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -131,7 +125,7 @@ export class MyApp {
     this.isVisible = !this.isVisible;
   }
 
-  openPage(page) {
+ openPage(page) {
     console.log(page);
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
@@ -139,7 +133,7 @@ export class MyApp {
   }
   openChild(child) {
 
-  console.log(child);
+ console.log(child);
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(child.link);
