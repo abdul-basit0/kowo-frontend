@@ -12,7 +12,7 @@ import { SignUpIIPage } from '../pages/signupII/signupII';
 import { SignUpIIIPage } from '../pages/signupIII/signupIII';
 import { createRidePage } from '../pages/createRide/createRide';
 
-import { SettingsPage } from '../pages/settings/settings';
+import { ProfilePage } from '../pages/profile/profile';
 
 @Component({
   templateUrl: 'app.html'
@@ -40,8 +40,8 @@ export class MyApp {
       },
       {
         title: 'My Settings', component: '', image: 'icon-settings', child: [{
-          name: 'My Settings',
-          link: SettingsPage
+          name: 'My Profile',
+          link: ProfilePage
         },
           {
             name: 'Manage Rating',

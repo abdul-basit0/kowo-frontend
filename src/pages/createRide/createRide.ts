@@ -34,8 +34,6 @@ export class createRidePage {
       console.log('Error getting location', error);
     });
 
-
-
   }
 
   getCurrLocationWork() {

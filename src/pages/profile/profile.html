@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="header">
+    <h2 class="flex align--center justify--center ng-binding" align="center">
+                <i class="icon-settings kowoIconFamily"></i>
+              My settings
+            </h2>
+
+  </div>
+
+  <div class="bottomContent">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-md-3 class="uploadImage">
+          <div (click)="openImageLoader()">
+            <a href="#">Upload Image</a>
+            <img [src]="base64Image" *ngIf="base64Image" >
+          </div>
+        </ion-col>
+        <ion-col col-md-9>
+          <div>
+            <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
+          </div>
+          <div>
+            <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>
