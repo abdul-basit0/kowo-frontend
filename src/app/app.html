@@ -13,6 +13,10 @@
             <i class="{{p.image + ' kowoIconFamily'}}"></i>
           </div>
           <p [innerHtml]="p.title" class="menuItemTitle"></p>
+            <div class="notificationBubble" *ngIf="p.component===InboxPage">
+              <span>0</span>
+            </div>
+
         </button>
         <div *ngIf="p.child.length>1" [hidden] = "!isVisible"  >
           <ul class="childrenList">

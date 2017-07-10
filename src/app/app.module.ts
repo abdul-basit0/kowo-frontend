@@ -10,7 +10,7 @@ import { SignUpIIPage } from '../pages/signupII/signupII';
 import { SignUpIIIPage } from '../pages/signupIII/signupIII';
 import { createRidePage } from '../pages/createRide/createRide';
 import { AuthPage } from '../pages/auth/login';
-import { SettingsPage } from '../pages/settings/settings';
+import { ProfilePage } from '../pages/profile/profile';
 
 // import { Router } from '@angular/router';
 
@@ -30,7 +30,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignUpIIIPage,
     createRidePage,
     AuthPage,
-    SettingsPage
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +48,7 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignUpIIIPage,
     createRidePage,
     AuthPage,
-    SettingsPage
+    ProfilePage
   ],
   providers: [
     StatusBar,

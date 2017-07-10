@@ -1,0 +1,56 @@
+page-profile {
+  font-size: 15px;
+  font-family: 'ubuntulight', sans-serif;
+  letter-spacing: 0.8px;
+
+  .text-input {
+    box-sizing: content-box;
+    text-align: center;
+    background-color: #4ac7cc;
+    padding: 13px 8px !important;
+    color: #fff;
+    margin: 0 0 10px 0 !important;
+  }
+
+  .item-md {
+    background: transparent !important;
+  }
+
+  .item-inner {
+    padding-right: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .uploadImage {
+    text-align: center !important;
+
+    div {
+      // display: inline-block;
+      // border-radius: 50%;
+      // background: #4ac7cc;
+      // padding: 10% 1%;
+      // margin: 7px;
+
+      &:hover {
+        cursor: pointer !important;
+      }
+
+      a {
+        text-decoration: none;
+        line-height: 1em;
+        color: #fff;
+        font-size: 10px;
+      }
+
+      img {
+        display: inline-block;
+        border-radius: 50%;
+        background: #4ac7cc;
+        width: 70px;
+        height: 70px;
+        margin: 7px;
+      }
+    }
+  }
+}
+//End of main element

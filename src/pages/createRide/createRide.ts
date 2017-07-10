@@ -26,8 +26,6 @@ export class createRidePage {
       console.log('Error getting location', error);
     });
 
-
-
   }
 
   getAddress() {
