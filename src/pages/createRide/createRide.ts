@@ -3,13 +3,14 @@ import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder, NativeGeocoderReverseResult} from '@ionic-native/native-geocoder';
 
+
 @Component({
   selector: 'page-createRide',
   templateUrl: 'createRide.html'
 })
 export class createRidePage {
   public position:string;
-  public address:string;
+  public address:NativeGeocoderReverseResult;
   constructor(public navCtrl: NavController, private geolocation: Geolocation, private nativeGeocoder: NativeGeocoder) {
 
 }
@@ -33,7 +34,7 @@ getAddress()
 {
 this.nativeGeocoder.reverseGeocode(33.5857793,73.0877285)
   .then((result: NativeGeocoderReverseResult) => {
-  this.address = result.street + "," + result.countryCode;  
+  this.address = result;
   console.log('The address is ' + result.street + ' in ' + result.countryCode)
   }).catch((error: any) => console.log(error));
 
