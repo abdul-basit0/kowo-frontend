@@ -10,7 +10,7 @@ import { NativeGeocoder, NativeGeocoderReverseResult} from '@ionic-native/native
 })
 export class createRidePage {
   public position:string;
-  public address:NativeGeocoderReverseResult;
+  public address:string;
   constructor(public navCtrl: NavController, private geolocation: Geolocation, private nativeGeocoder: NativeGeocoder) {
 
 }
@@ -34,7 +34,7 @@ getAddress()
 {
 this.nativeGeocoder.reverseGeocode(33.5857793,73.0877285)
   .then((result: NativeGeocoderReverseResult) => {
-  this.address = result;
+  this.address = result.street;
   console.log('The address is ' + result.street + ' in ' + result.countryCode)
   }).catch((error: any) => console.log(error));
 
