@@ -35,6 +35,7 @@ export class createRidePage {
     });
 
   }
+  
 
   getCurrLocationWork() {
     this.geolocation.getCurrentPosition().then((resp) => {
