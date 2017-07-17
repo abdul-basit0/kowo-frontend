@@ -33,6 +33,22 @@ body {
     }
   }
 
+
+    ::-webkit-input-placeholder {
+        color:#fff !important;
+    }
+
+    ::-moz-placeholder {
+        color:#fff !important;
+    }
+
+    ::-ms-placeholder {
+        color:#fff !important;
+    }
+
+    ::placeholder {
+        color:#fff !important;
+    }
 }
 @font-face {
   font-family: 'ubuntubold';
