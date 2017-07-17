@@ -26,7 +26,14 @@ page-createRide {
       justify-content: center;
     }
 
-
+.detourTime{
+    text-align: left;
+    color:rgb(42, 122, 125);
+}
+.seatsAva{
+    text-align: right;
+    color:rgb(42, 122, 125);
+}
     label.coolbox {
 
 
@@ -41,7 +48,15 @@ page-createRide {
     font-weight:bold;
     font-size:20px;
 }
+.ion-md-remove:before {
 
+    font-size: 1.7em;
+
+}
+.ion-md-add:before {
+
+    font-size: 1.7em;
+}
 .spacer{
 
   width:6.94%;
@@ -75,30 +90,109 @@ text-align:center;
 
 .iconLeft{
 
-text-align: left;
+
 background-color:#4ac7cc;
 color:white;
   font-size: 0.9em;
+  float:left;
+  padding-top:16px;
 }
 
 .iconRight{
 
-text-align: right;
-background-color:#4ac7cc;
-font-size: 0.9em;
 
-color:white;
+  background-color:#4ac7cc;
+  font-size: 0.9em;
+  float:right;
+  padding-top:16px;
+  color:white;
 
 }
+
+.iconLeftMinus{
+
+
+  background-color:#4ac7cc;
+  color:rgb(42, 122, 125);
+  font-size: 0.9em;
+  float:left;
+  padding-top:12px;
+  cursor:pointer;
+}
+
+.iconRightPlus{
+
+
+  background-color:#4ac7cc;
+  font-size: 0.9em;
+  float:right;
+  padding-top:12px;
+  color:rgb(42, 122, 125);
+  cursor:pointer;
+
+}
+.label_time{
+
+  float:left !important;
+  color: #2a7a7d;
+  font-family: 'ubuntulight';
+  padding-top:13px;
+}
+.datetime-md {
+    padding: 0 !important;
+    color:white;
+}
+.timeIconRight{
+  background-color:#4ac7cc;
+  font-size: 0.9em;
+  float:right;
+  padding-bottom:13px;
+  color:white;
+
+}
+.iconMinus{
+  font-weight:bolder;
+  font-style: normal;
+  float:left;
+  size:10px;
+}
+.iconPlus{
+  font-weight:bolder;
+  font-style: normal;
+  float: right;
+  size:10px;
+}
+
 .inputGeo{
 
   display:inline-block;
-  width:90%;
+  width:88%;
+}
+
+.inputRange{
+
+  display:inline-block;
+  width:50%;
+  cursor:pointer;
+}
+.text-input[disabled] {
+    opacity: 4;
+
 }
 .geo{
 
   background-color:#4ac7cc;
+
 }
+.checkboxDes{
+      text-transform: uppercase;
+      font-family: 'ubunturegular';
+      font-size: 0.9em;
+      color: #2a7a7d;
+      vertical-align: 10px;
+      cursor: pointer;
+}
+
 
 .rightIcon{
 text-align: right;
@@ -110,11 +204,31 @@ color:white;
   text-align:center;
 }
 
+.item.item-md .checkbox-md {
+
+
+    margin: 0px 4px;
+}
 .checkbox-md .checkbox-checked {
     border-color: grey;
     background-color: white;
 }
 
+.rowAlign {
+    text-align: center;
+    // margin-left: 5px;
+}
+
+.icon-geolocalize:before {
+
+    vertical-align: -9px;
+    color:#2a7a7d;
+}
+
+.geoicon{
+
+  max-width: 6.33333% !important;
+}
 .checkSpan{
 
   min-width:35px;

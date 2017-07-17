@@ -83,21 +83,21 @@
 
       </ion-row>
       <ion-row>
-        <ion-col col-12 class="checkbox_align">
-
-
-
-            <ion-checkbox>Weekly</ion-checkbox>
-
-
+        <ion-col col-auto>
+          <ion-item>
+            <ion-label class="checkboxDes">Weekly</ion-label>
+            <ion-checkbox></ion-checkbox>
+          </ion-item>
         </ion-col>
-
-
       </ion-row>
 
-      <ion-row>
 
-        <ion-col col-11 class="geo">
+
+
+      <ion-row class="rowAlign">
+
+        <ion-col col-11  class="geo ">
+
           <i class="icon-home kowoIconFamily iconLeft"></i>
 
 
@@ -105,9 +105,10 @@
 
 
         <i class="icon-edit kowoIconFamily iconRight"></i>
+
       </ion-col>
 
-    <ion-col col-1><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationHome();'></i></ion-col>
+    <ion-col col-1 class="geoicon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationHome();'></i></ion-col>
 
     </ion-row>
 
@@ -119,7 +120,7 @@
     </ion-row>
 
 
-          <ion-row>
+          <ion-row class="rowAlign">
 
           <ion-col col-11 class="geo">
               <i class="icon-work kowoIconFamily iconLeft"></i>
@@ -131,19 +132,73 @@
             <i class="icon-edit kowoIconFamily iconRight"></i>
           </ion-col>
 
-        <ion-col col-1><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork();'></i></ion-col>
+        <ion-col col-1 class="geoicon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork();'></i></ion-col>
 
         </ion-row>
 
 
 
-      <ion-row>
-        <ion-col col-12>
+        <ion-row>
+          <ion-col col-auto>
+            <ion-item>
+              <ion-label class="checkboxDes">Round Trip</ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+          </ion-col>
+        </ion-row>
 
-          <ion-input type="text" placeholder="Phone Number"></ion-input>
+
+
+          <ion-row class="rowAlign">
+
+          <ion-col col-12 class="geo">
+              <label class="label_time">Work Arrival</label>
+
+
+        <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+
+
+            <i class="icon-edit kowoIconFamily timeIconRight"></i>
+          </ion-col>
+
+          </ion-row>
+          <ion-row>
+            <ion-col col-6 class="detourTime"><label>Max Detour Time</label></ion-col>
+            <ion-col col-6 class="seatsAva"><label>Seats Available</label></ion-col>
+          </ion-row>
+
+
+        <ion-row class="rowAlign">
+
+        <ion-col col-6 class="geo">
+
+
+
+            <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
+
+            <ion-input type="text" placeholder="15" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
+            <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
+
 
         </ion-col>
+
+
+        <ion-col col-6 class="geo">
+
+
+          <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
+
+            <ion-input type="text" placeholder="3" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
+
+
+            <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
+
+        </ion-col>
+
+
+
       </ion-row>
+
 
       <ion-row>
         <ion-col col-12 class="buttonValidate">
