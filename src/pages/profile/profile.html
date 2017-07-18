@@ -8,8 +8,9 @@
 
 <ion-content padding>
   <div class="header">
+    <i class="icon-settings kowoIconFamily"></i>
     <h2 class="flex align--center justify--center ng-binding" align="center">
-                <i class="icon-settings kowoIconFamily"></i>
+
               My settings
             </h2>
 
@@ -18,21 +19,82 @@
   <div class="bottomContent">
     <ion-grid>
       <ion-row>
-        <ion-col col-md-3 class="uploadImage">
-          <div (click)="openImageLoader()">
-            <a href="#">Upload Image</a>
-            <img [src]="base64Image" *ngIf="base64Image" >
+        <ion-col col-md-3 col-12 class="uploadImage">
+          <div>
+            <a href="#" *ngIf="!base64Image" (click)="openImageLoader()">Upload Image</a>
+            <img [src]="base64Image" *ngIf="base64Image" (click)="openImageLoader()">
           </div>
         </ion-col>
-        <ion-col col-md-9>
+        <ion-col col-md-9 col-12>
           <div>
-            <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
+            <ion-input type="text" value="" placeholder="First Name"></ion-input>
           </div>
           <div>
-            <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
+            <ion-input type="text" value="" placeholder="Last Name"></ion-input>
           </div>
         </ion-col>
       </ion-row>
+
+      <ion-row>
+        <ion-col col-md-12>
+          <ion-input type="text" value="" placeholder="Phone Number"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-md-12>
+          <ion-input type="email" value="" placeholder="Enter your email"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <select class="dropDownMen">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="dl">Dutch</option>
+          </select>
+        </ion-col>
+      </ion-row>
+        <!-- <ion-col col-md-12>
+          <div class="homeAddressContent">
+            <ion-input [(ngModel)]="autocomplete.home" placeholder="Home" (ngModelChange)="updateHomeAddress()"></ion-input>
+            <i class="icon icon-geolocalize kowoIconFamily"></i>
+            <div class="autocompleteContent">
+              <ion-item *ngFor="let item of autocompleteHome" tappable (click)="chooseHomeAddress(item)">
+                {{ item }}
+              </ion-item>
+            </div>
+          </div>
+        </ion-col> -->
+        <ion-row class="rowAlign">
+          <ion-col col-11 class="geo customCol">
+            <div class="homeAddressContent">
+              <i class="icon-home kowoIconFamily iconLeft"></i>
+              <ion-input type="text" [(ngModel)]="autocomplete.home" placeholder="Home" class="inputGeo" (ngModelChange)="updateHomeAddress()"></ion-input>
+              <i class="icon-edit kowoIconFamily iconRight"></i>
+              <div class="autocompleteContent">
+                <ion-item *ngFor="let item of autocompleteHome" tappable (click)="chooseHomeAddress(item)">
+                  {{ item }}
+                </ion-item>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork();'></i></ion-col>
+        </ion-row>
+        <ion-row class="rowAlign">
+          <ion-col col-11 class="geo customCol">
+            <div class="destinationAddressContent">
+              <i class="icon-work kowoIconFamily iconLeft"></i>
+              <ion-input type="text" [(ngModel)]="autocomplete.destination" placeholder="Destination" class="inputGeo" (ngModelChange)="updateDestinationAddress()"></ion-input>
+              <i class="icon-edit kowoIconFamily iconRight"></i>
+              <div class="autocompleteContent">
+                <ion-item *ngFor="let item of autocompleteDestination" tappable (click)="chooseDestinationAddress(item)">
+                  {{ item }}
+                </ion-item>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationDestination();'></i></ion-col>
+        </ion-row>
     </ion-grid>
 
   </div>

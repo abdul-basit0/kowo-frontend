@@ -12,203 +12,175 @@
 
   <!--<form>-->
 
-    <ion-grid>
-      <ion-row>
-        <ion-col col-12>
-          <h2 class="flex align--center justify--center">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <h2 class="flex align--center justify--center">
                       <i class="icon-driver kowoIconFamily"></i>
                       <span>Driver</span>
               </h2>
-        </ion-col>
-      </ion-row>
-      <ion-row class="weekDay">
+      </ion-col>
+    </ion-row>
+    <ion-row class="weekDay">
 
 
 
-        <ion-col col-1>
-          <label class="coolbox">
+      <ion-col col-1>
+        <label class="coolbox">
                         <input type="checkbox" name="Mon" value="Mon"/>
                           <span class="checkSpan">M</span>
                         </label>
-        </ion-col>
-        <span class="spacer"></span>
+      </ion-col>
+      <span class="spacer"></span>
 
-        <ion-col col-1>
-          <label class="coolbox">
+      <ion-col col-1>
+        <label class="coolbox">
                         <input type="checkbox" name="Tue" value="Tue"/>
                           <span class="checkSpan">T</span>
                         </label>
-        </ion-col>
+      </ion-col>
 
-        <span class="spacer"></span>
-        <ion-col col-1>
-          <label class="coolbox">
+      <span class="spacer"></span>
+      <ion-col col-1>
+        <label class="coolbox">
                         <input type="checkbox" name="Wed" value="Wed"/>
                           <span class="checkSpan">W</span>
                         </label>
-        </ion-col>
+      </ion-col>
 
-        <span class="spacer"></span>
-        <ion-col col-1>
-          <label class="coolbox">
+      <span class="spacer"></span>
+      <ion-col col-1>
+        <label class="coolbox">
                         <input type="checkbox" name="Thu" value="Thu"/>
                           <span class="checkSpan">T</span>
                         </label>
-        </ion-col>
+      </ion-col>
 
-        <span class="spacer"></span>
-        <ion-col col-1>
-          <label class="coolbox">
+      <span class="spacer"></span>
+      <ion-col col-1>
+        <label class="coolbox">
                         <input type="checkbox" name="Fri" value="Fri"/>
                           <span class="checkSpan">F</span>
                         </label>
-        </ion-col>
+      </ion-col>
 
-        <span class="spacer"></span>
-        <ion-col col-1>
-          <label class="coolbox">
+      <span class="spacer"></span>
+      <ion-col col-1>
+        <label class="coolbox">
                         <input type="checkbox" name="Sat" value="Sat"/>
                           <span class="checkSpan">S</span>
                         </label>
-        </ion-col>
-        <span class="spacer"></span>
-        <ion-col col-1>
-          <label class="coolbox">
+      </ion-col>
+      <span class="spacer"></span>
+      <ion-col col-1>
+        <label class="coolbox">
                         <input type="checkbox" name="Sun" value="Sun"/>
                           <span class="checkSpan">S</span>
                         </label>
-        </ion-col>
-
-
-
-      </ion-row>
-      <ion-row>
-        <ion-col col-auto>
-          <ion-item>
-            <ion-label class="checkboxDes">Weekly</ion-label>
-            <ion-checkbox></ion-checkbox>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-
-
-
-
-      <ion-row class="rowAlign">
-
-        <ion-col col-11  class="geo ">
-
-          <i class="icon-home kowoIconFamily iconLeft"></i>
-
-
-          <ion-input type="text" placeholder="home" class="inputGeo" [(ngModel)]="homeAddress"></ion-input>
-
-
-        <i class="icon-edit kowoIconFamily iconRight"></i>
-
       </ion-col>
-
-    <ion-col col-1 class="geoicon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationHome();'></i></ion-col>
-
+    </ion-row>
+    <ion-row>
+      <ion-col col-auto>
+        <ion-item>
+          <ion-label class="checkboxDes">Weekly</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="rowAlign">
+      <ion-col col-11 class="geo customCol">
+        <i class="icon-home kowoIconFamily iconLeft"></i>
+        <ion-input type="text" placeholder="home" class="inputGeo" [(ngModel)]="homeAddress"></ion-input>
+        <i class="icon-edit kowoIconFamily iconRight"></i>
+      </ion-col>
+      <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationHome();'></i></ion-col>
     </ion-row>
 
 
     <ion-row>
       <ion-col col-12>
-          <i class="icon-round-trip kowoIconFamily"></i>
+        <i class="icon-round-trip kowoIconFamily"></i>
       </ion-col>
     </ion-row>
 
+    <ion-row class="rowAlign">
+      <ion-col col-11 class="geo customCol">
+        <i class="icon-work kowoIconFamily iconLeft"></i>
+        <ion-input type="text" placeholder="work" class="inputGeo" [(ngModel)]="homeWork"></ion-input>
+        <i class="icon-edit kowoIconFamily iconRight"></i>
+      </ion-col>
+      <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork();'></i></ion-col>
+    </ion-row>
 
-          <ion-row class="rowAlign">
+    <ion-row>
+      <ion-col col-auto>
+        <ion-item>
+          <ion-label class="checkboxDes">Round Trip</ion-label>
+          <ion-checkbox></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
 
-          <ion-col col-11 class="geo">
-              <i class="icon-work kowoIconFamily iconLeft"></i>
+    <ion-row class="rowAlign">
 
-
-              <ion-input type="text" placeholder="work" class="inputGeo" [(ngModel)]="workAddress"></ion-input>
-
-
-            <i class="icon-edit kowoIconFamily iconRight"></i>
-          </ion-col>
-
-        <ion-col col-1 class="geoicon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork();'></i></ion-col>
-
-        </ion-row>
-
-
-
-        <ion-row>
-          <ion-col col-auto>
-            <ion-item>
-              <ion-label class="checkboxDes">Round Trip</ion-label>
-              <ion-checkbox></ion-checkbox>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-
-
-
-          <ion-row class="rowAlign">
-
-          <ion-col col-12 class="geo">
-              <label class="label_time">Work Arrival</label>
+      <ion-col col-12 class="geo">
+        <label class="label_time">Work Arrival</label>
 
 
         <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
 
 
-            <i class="icon-edit kowoIconFamily timeIconRight"></i>
-          </ion-col>
+        <i class="icon-edit kowoIconFamily timeIconRight"></i>
+      </ion-col>
 
-          </ion-row>
-          <ion-row>
-            <ion-col col-6 class="detourTime"><label>Max Detour Time</label></ion-col>
-            <ion-col col-6 class="seatsAva"><label>Seats Available</label></ion-col>
-          </ion-row>
-
-
-        <ion-row class="rowAlign">
-
-        <ion-col col-6 class="geo">
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 class="detourTime"><label>Max Detour Time</label></ion-col>
+      <ion-col col-6 class="seatsAva"><label>Seats Available</label></ion-col>
+    </ion-row>
 
 
+    <ion-row class="rowAlign">
 
-            <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
-
-            <ion-input type="text" placeholder="15" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
-            <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
-
-
-        </ion-col>
-
-
-        <ion-col col-6 class="geo">
-
-
-          <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
-
-            <ion-input type="text" placeholder="3" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
-
-
-            <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
-
-        </ion-col>
+      <ion-col col-6 class="geo">
 
 
 
-      </ion-row>
+        <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
+
+        <ion-input type="text" placeholder="15" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
+        <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
 
 
-      <ion-row>
-        <ion-col col-12 class="buttonValidate">
+      </ion-col>
 
-          <button ion-button type="submit" block>validate</button>
 
-        </ion-col>
-      </ion-row>
+      <ion-col col-6 class="geo">
 
-    </ion-grid>
+
+        <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
+
+        <ion-input type="text" placeholder="3" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
+
+
+        <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
+
+      </ion-col>
+
+
+
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col col-12 class="buttonValidate">
+
+        <button ion-button type="submit" block>validate</button>
+
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 
 
 

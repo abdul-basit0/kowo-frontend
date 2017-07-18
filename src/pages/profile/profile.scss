@@ -1,3 +1,5 @@
+$mainColor: #4ac7cc;
+
 page-profile {
   font-size: 15px;
   font-family: 'ubuntulight', sans-serif;
@@ -6,10 +8,10 @@ page-profile {
   .text-input {
     box-sizing: content-box;
     text-align: center;
-    background-color: #4ac7cc;
+    background-color: $mainColor;
     padding: 13px 8px !important;
     color: #fff;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 10px !important;
   }
 
   .item-md {
@@ -27,30 +29,149 @@ page-profile {
     div {
       // display: inline-block;
       // border-radius: 50%;
-      // background: #4ac7cc;
+      // background: $mainColor;
       // padding: 10% 1%;
       // margin: 7px;
-
       &:hover {
         cursor: pointer !important;
       }
 
       a {
         text-decoration: none;
-        line-height: 1em;
-        color: #fff;
+        line-height: 9em;
         font-size: 10px;
+        padding: 35px 0;
+        color: #fff;
+        border-radius: 50%;
+        background: $mainColor;
       }
 
       img {
         display: inline-block;
         border-radius: 50%;
-        background: #4ac7cc;
+        background: $mainColor;
         width: 70px;
         height: 70px;
         margin: 7px;
       }
     }
+  }
+
+  .dropDownMen {
+    color: #fff;
+    font-family: 'ubuntulight';
+    font-size: 15px;
+    padding: 13px 8px !important;
+    width: 100%;
+    background-color: $mainColor;
+    margin: 0 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    text-align-last: center;
+    border: none;
+  }
+
+  .header {
+    text-align: center;
+    font-family: 'ubunturegular';
+
+    h2 {
+      font-size: 1em;
+      text-transform: uppercase;
+      color: $mainColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 0;
+    }
+
+    i {
+      font-size: 1.8em;
+      color: $mainColor;
+    }
+  }
+
+  .autocompleteContent {
+    background: #fff;
+  }
+
+  .homeAddressContent {
+    position: relative;
+
+    .autocompleteContent {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 9999999999999999;
+    }
+
+    input {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .destinationAddressContent {
+    position: relative;
+
+    .autocompleteContent {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 9999999999999999;
+    }
+
+    input {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .geoicon {
+    max-width: 6.33333% !important;
+
+    i {
+      vertical-align: middle;
+      color: #2a7a7d;
+    }
+  }
+
+  .customIcon {
+        margin-top: 0.9%;
+    max-width: 3.33333% !important;
+  }
+
+  .customCol {
+    margin: 5px;
+    flex: 0 0 95.66667% !important;
+    width: 95.66667% !important;
+    max-width: 95.66667% !important;
+  }
+
+  .inputGeo {
+    display: inline-block !important;
+    width: 88% !important;
+  }
+
+  .geo {
+    background-color: #4ac7cc;
+  }
+
+  .iconLeft {
+    background-color: #4ac7cc;
+    color: white;
+    font-size: 0.9em;
+    float: left;
+    padding-top: 16px;
+  }
+
+  .iconRight {
+    background-color: #4ac7cc;
+    font-size: 0.9em;
+    float: right;
+    padding-top: 16px;
+    color: white;
   }
 }
 //End of main element
