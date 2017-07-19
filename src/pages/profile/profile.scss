@@ -138,20 +138,75 @@ page-profile {
   }
 
   .customIcon {
-        margin-top: 0.9%;
-    max-width: 3.33333% !important;
+    text-align: center;
+    margin-top: 0.9%;
+    max-width: 4% !important;
+    @media only screen and (max-width: 480px) {
+      margin-top: 2.9%;
+    }
   }
 
   .customCol {
     margin: 5px;
-    flex: 0 0 95.66667% !important;
-    width: 95.66667% !important;
-    max-width: 95.66667% !important;
+    flex: 0 0 94.66667% !important;
+    width: 94.66667% !important;
+    max-width: 94.66667% !important;
+    @media only screen and (max-width: 767px) {
+      flex: 0 0 91.66667% !important;
+      width: 91.66667% !important;
+      max-width: 91.66667% !important;
+    }
+    @media only screen and (max-width: 480px) {
+      flex: 0 0 86.66667% !important;
+      width: 86.66667% !important;
+      max-width: 86.66667% !important;
+    }
   }
 
   .inputGeo {
     display: inline-block !important;
     width: 88% !important;
+    @media only screen and (max-width: 480px) {
+      width: 86% !important;
+    }
+  }
+
+  .radio-md .radio-inner {
+    background: transparent !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .radio-md .radio-icon {
+    width: 24px !important;
+    height: 24px !important;
+    border-color: #2a7a7d !important;
+    background: #fff !important;
+  }
+
+  .radio-md .radio-inner:before {
+    content: "\2713";
+    position: absolute;
+    top: -3px;
+    color: #000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+  }
+
+  .preferenceRadioButton {
+    .item-md {
+      font-size: 15px;
+      font-family: 'ubuntulight', sans-serif;
+      letter-spacing: 0.8px;
+      color: #2a7a7d !important;
+      text-transform: uppercase;
+    }
+
+    .item-radio-checked.item-md ion-label {
+      color: #2a7a7d !important;
+    }
   }
 
   .geo {

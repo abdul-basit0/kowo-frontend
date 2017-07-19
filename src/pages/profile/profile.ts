@@ -140,6 +140,8 @@ export class ProfilePage {
 
         if (predictions == null) {
           me.autocompleteHome.push("Not Found");
+          me.autocompleteHome = [];
+          me.autocompleteHome.length = 0;
         } else {
           predictions.forEach(function(prediction) {
             me.autocompleteHome.push(prediction.description);
@@ -148,6 +150,7 @@ export class ProfilePage {
 
       });
     });
+
   }
 
   updateDestinationAddress() {
@@ -166,6 +169,8 @@ export class ProfilePage {
 
         if (predictions == null) {
           me.autocompleteDestination.push("Not Found");
+          me.autocompleteDestination = [];
+          me.autocompleteDestination.length = 0;
         } else {
           predictions.forEach(function(prediction) {
             me.autocompleteDestination.push(prediction.description);
