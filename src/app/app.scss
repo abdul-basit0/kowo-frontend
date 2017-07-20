@@ -11,9 +11,10 @@ body {
   }
 
   .childrenList {
-        padding-left: 0;
+    padding-left: 0;
     margin-bottom: 0;
     margin-top: 0;
+
     li {
       padding-left: 16px;
       border-bottom: 1px solid #ddd;
@@ -22,6 +23,7 @@ body {
       padding-top: 0;
       padding-bottom: 0;
       transition: 0.09s all linear;
+
       a {
         font-family: 'ubuntulight', sans-serif;
         letter-spacing: 0.8px;
@@ -33,22 +35,38 @@ body {
     }
   }
 
+  .buttonValidate {
+    button {
+      width: 100%;
+      margin: 30px 0 10px;
+      padding: 0;
+      background-color: #2a7a7d;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 0;
+      border-radius: 2px;
 
-    ::-webkit-input-placeholder {
-        color:#fff !important;
+      &:hover {
+        background-color: #2a7a7d !important;
+      }
     }
+  }
 
-    ::-moz-placeholder {
-        color:#fff !important;
-    }
+  ::-webkit-input-placeholder {
+    color: #fff !important;
+  }
 
-    ::-ms-placeholder {
-        color:#fff !important;
-    }
+  ::-moz-placeholder {
+    color: #fff !important;
+  }
 
-    ::placeholder {
-        color:#fff !important;
-    }
+  ::-ms-placeholder {
+    color: #fff !important;
+  }
+
+  ::placeholder {
+    color: #fff !important;
+  }
 }
 @font-face {
   font-family: 'ubuntubold';
@@ -254,13 +272,12 @@ body {
 
 .sideMenuMain {
   button {
-      background-color: #4ac7cc;
+    background-color: #4ac7cc;
   }
 
   div.item-inner {
     border-bottom: none !important;
   }
-
 
   .menuItemTitle,
   .sidemenuIcons {
@@ -270,13 +287,14 @@ body {
 
 .sideMenuMain {
   border-bottom: 1px solid #ddd;
+
   .menuItemTitle {
-        padding: 6%;
+    padding: 6%;
     font-size: 13px;
-      font-family: 'ubuntulight', sans-serif;
-      letter-spacing: 0.8px;
-      color: #fff;
-      text-transform: uppercase;
+    font-family: 'ubuntulight', sans-serif;
+    letter-spacing: 0.8px;
+    color: #fff;
+    text-transform: uppercase;
   }
 }
 
@@ -305,9 +323,8 @@ body {
   .scroll-content {
     background-color: #4ac7cc !important;
     background-image: none !important;
-
   }
- }
+}
 // .sideMenuMain .label {
 //   display: table;
 // }

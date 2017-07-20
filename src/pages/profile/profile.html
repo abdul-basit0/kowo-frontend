@@ -54,7 +54,7 @@
           </select>
         </ion-col>
       </ion-row>
-        <!-- <ion-col col-md-12>
+      <!-- <ion-col col-md-12>
           <div class="homeAddressContent">
             <ion-input [(ngModel)]="autocomplete.home" placeholder="Home" (ngModelChange)="updateHomeAddress()"></ion-input>
             <i class="icon icon-geolocalize kowoIconFamily"></i>
@@ -65,76 +65,87 @@
             </div>
           </div>
         </ion-col> -->
-        <ion-row class="rowAlign">
-          <ion-col col-11 class="geo customCol">
-            <div class="homeAddressContent">
-              <i class="icon-home kowoIconFamily iconLeft"></i>
-              <ion-input type="text" [(ngModel)]="autocomplete.home" placeholder="Home" class="inputGeo" (ngModelChange)="updateHomeAddress()"></ion-input>
-              <i class="icon-edit kowoIconFamily iconRight"></i>
-              <div class="autocompleteContent">
-                <ion-item *ngFor="let item of autocompleteHome" tappable (click)="chooseHomeAddress(item)">
-                  {{ item }}
-                </ion-item>
-              </div>
+      <ion-row class="rowAlign">
+        <ion-col col-11 class="geo customCol">
+          <div class="homeAddressContent">
+            <i class="icon-home kowoIconFamily iconLeft"></i>
+            <ion-input type="text" [(ngModel)]="autocomplete.home" placeholder="Home" class="inputGeo" (ngModelChange)="updateHomeAddress()"></ion-input>
+            <i class="icon-edit kowoIconFamily iconRight"></i>
+            <div class="autocompleteContent">
+              <ion-item *ngFor="let item of autocompleteHome" tappable (click)="chooseHomeAddress(item)">
+                {{ item }}
+              </ion-item>
             </div>
-          </ion-col>
-          <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationHome()'></i></ion-col>
-        </ion-row>
-        <ion-row class="rowAlign">
-          <ion-col col-11 class="geo customCol">
-            <div class="destinationAddressContent">
-              <i class="icon-work kowoIconFamily iconLeft"></i>
-              <ion-input type="text" [(ngModel)]="autocomplete.destination" placeholder="Destination" class="inputGeo" (ngModelChange)="updateDestinationAddress()"></ion-input>
-              <i class="icon-edit kowoIconFamily iconRight"></i>
-              <div class="autocompleteContent">
-                <ion-item *ngFor="let item of autocompleteDestination" tappable (click)="chooseDestinationAddress(item)">
-                  {{ item }}
-                </ion-item>
-              </div>
+          </div>
+        </ion-col>
+        <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationHome()'></i></ion-col>
+      </ion-row>
+      <ion-row class="rowAlign">
+        <ion-col col-11 class="geo customCol">
+          <div class="destinationAddressContent">
+            <i class="icon-work kowoIconFamily iconLeft"></i>
+            <ion-input type="text" [(ngModel)]="autocomplete.destination" placeholder="Destination" class="inputGeo" (ngModelChange)="updateDestinationAddress()"></ion-input>
+            <i class="icon-edit kowoIconFamily iconRight"></i>
+            <div class="autocompleteContent">
+              <ion-item *ngFor="let item of autocompleteDestination" tappable (click)="chooseDestinationAddress(item)">
+                {{ item }}
+              </ion-item>
             </div>
+          </div>
+        </ion-col>
+        <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork()'></i></ion-col>
+      </ion-row>
+
+
+      <ion-row radio-group class="preferenceRadioButton" [(ngModel)]="carPreference" (ionChange)="checkPref()">
+        <ion-col col-auto>
+
+          <ion-item>
+            <ion-label>My Own Car</ion-label>
+            <ion-radio item-left value="myOwnCar" checked></ion-radio>
+
+          </ion-item>
+          <ion-item>
+            <ion-label>Company Car</ion-label>
+            <ion-radio item-left value="companyCar"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>I don't have a car</ion-label>
+            <ion-radio item-left value="noCar"></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <div *ngIf="showCarProperties">
+        <ion-row>
+          <ion-col col-md-12>
+            <ion-input type="text" value="" placeholder="Car Name"></ion-input>
           </ion-col>
-          <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork()'></i></ion-col>
         </ion-row>
-
-
-        <ion-row radio-group class="preferenceRadioButton" [(ngModel)]="relationship">
-          <ion-col col-auto>
-            <ion-item>
-              <ion-label>My Own Car</ion-label>
-              <ion-radio item-left value="dfgdfg" checked></ion-radio>
-
-            </ion-item>
-            <ion-item>
-              <ion-label>Company Car</ion-label>
-              <ion-radio item-left value="456456456"></ion-radio>
-            </ion-item>
-            <ion-item>
-              <ion-label>I don't have a car</ion-label>
-              <ion-radio item-left value="dfghfdgdf"></ion-radio>
-            </ion-item>
+        <ion-row>
+          <ion-col col-md-12>
+            <ion-input type="text" value="" placeholder="Model Number"></ion-input>
           </ion-col>
         </ion-row>
-</ion-grid>
-    <!--<ion-list radio-group class="preferenceRadioButton" [(ngModel)]="relationship">
+        <ion-row>
+          <ion-col col-md-12>
+            <ion-input type="text" value="" placeholder="Plate Number"></ion-input>
+          </ion-col>
+        </ion-row>
+      </div>
+      <ion-row>
+        <ion-col col-md-12>
+          <ion-item>
+            <ion-label>Sync rides with my calendar</ion-label>
+            <ion-toggle [(ngModel)]="syncCalendar"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 class="buttonValidate">
+            <button ion-button [navPush]="homepage" >Validate</button>
+        </ion-col>
+      </ion-row>
 
-
-
-      <ion-item>
-        <ion-radio value="dfgdfg" checked></ion-radio>
-        <ion-label>My Own Car</ion-label>
-
-      </ion-item>
-      <ion-item>
-        <ion-label>Company Car</ion-label>
-        <ion-radio value="456456456"></ion-radio>
-      </ion-item>
-      <ion-item>
-        <ion-label>I don't have a car</ion-label>
-        <ion-radio value="dfghfdgdf"></ion-radio>
-      </ion-item>
-
-    </ion-list>-->
-
-
+    </ion-grid>
   </div>
 </ion-content>

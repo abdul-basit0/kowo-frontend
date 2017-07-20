@@ -1,4 +1,60 @@
 page-inbox {
+  font-family: 'ubuntulight', sans-serif;
+  letter-spacing: 0.8px;
 
+  .scroll-content {
+    padding: 0 !important;
+  }
+
+  .topHeadingDetails {
+    padding: 16px;
+    text-transform: uppercase;
+    font-family: 'ubunturegular';
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    h2 {
+      margin-bottom: 0;
+      color: #4ac7cc;
+      font-size: 1em;
+    }
+
+    span {
+      font-size: 0.8em;
+      color: #a2a2a2;
+    }
+  }
+
+  .inboxContent {
+    padding: 16px;
+    display: inline-block;
+    width: 80%;
+
+    p {
+      margin: 0;
+      color: #4ac7cc;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    span {
+      font-size: 17px;
+      color: #626C69;
+    }
+  }
+
+  .inboxArea {
+    margin-bottom: 10px;
+    background: #fff;
+
+    ion-icon {
+      float: right;
+      font-size: 30px;
+      color: #4ac7cc;
+      padding: 16px;
+    }
+  }
 }
 //End of main element

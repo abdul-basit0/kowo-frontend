@@ -18,6 +18,14 @@ page-profile {
     background: transparent !important;
   }
 
+  .item-toggle {
+    ion-label {
+      color: #2a7a7d;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+  }
+
   .item-inner {
     padding-right: 0 !important;
     border-bottom: none !important;
@@ -59,7 +67,6 @@ page-profile {
 
   .dropDownMen {
     color: #fff;
-    font-family: 'ubuntulight';
     font-size: 15px;
     padding: 13px 8px !important;
     width: 100%;
@@ -167,7 +174,7 @@ page-profile {
     display: inline-block !important;
     width: 88% !important;
     @media only screen and (max-width: 480px) {
-      width: 86% !important;
+      width: 85% !important;
     }
   }
 
@@ -198,8 +205,6 @@ page-profile {
   .preferenceRadioButton {
     .item-md {
       font-size: 15px;
-      font-family: 'ubuntulight', sans-serif;
-      letter-spacing: 0.8px;
       color: #2a7a7d !important;
       text-transform: uppercase;
     }

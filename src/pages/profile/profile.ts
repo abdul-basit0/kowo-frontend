@@ -12,6 +12,8 @@ import { Camera } from '@ionic-native/camera';
 })
 export class ProfilePage {
   public base64Image: string;
+  carPreference;
+  showCarProperties;
   autocompleteDestination;
   autocompleteHome;
   autocomplete;
@@ -23,12 +25,24 @@ export class ProfilePage {
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, private camera: Camera, private zone: NgZone, private geolocation: Geolocation, private nativeGeocoder: NativeGeocoder) {
     this.autocompleteHome = [];
     this.autocompleteDestination = [];
+    this.showCarProperties = false;
     this.autocomplete = {
       home: '',
       destination: ''
     };
   }
 
+  checkPref() {
+    if(this.carPreference == "myOwnCar") {
+      this.showCarProperties = true;
+
+    } else if(this.carPreference == "companyCar") {
+      this.showCarProperties = true;
+
+    } else if(this.carPreference == "noCar"){
+      this.showCarProperties = false;
+    }
+  }
   openImageLoader() {
     let alert = this.alertCtrl.create({
       title: 'Choose One',
