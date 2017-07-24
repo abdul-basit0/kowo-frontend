@@ -11,6 +11,8 @@ import { SignUpIIIPage } from '../pages/signupIII/signupIII';
 import { createRidePage } from '../pages/createRide/createRide';
 import { AuthPage } from '../pages/auth/login';
 import { ProfilePage } from '../pages/profile/profile';
+import { InboxDetailPage } from '../pages/inboxDetails/inboxDetails';
+import { SendEvidencePage } from '../pages/sendEvidence/sendEvidence';
 
 // import { Router } from '@angular/router';
 
@@ -30,7 +32,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignUpIIIPage,
     createRidePage,
     AuthPage,
-    ProfilePage
+    ProfilePage,
+    InboxDetailPage,
+    SendEvidencePage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     SignUpIIIPage,
     createRidePage,
     AuthPage,
-    ProfilePage
+    ProfilePage,
+    InboxDetailPage,
+    SendEvidencePage
   ],
   providers: [
     StatusBar,

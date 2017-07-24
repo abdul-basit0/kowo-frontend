@@ -1,0 +1,21 @@
+page-sendEvidence {
+  .topDetails {
+    i {
+      color: #4ac7cc;
+    }
+  }
+  .dropDownMen {
+    color: #fff;
+    font-size: 15px;
+    padding: 13px 8px !important;
+    width: 100%;
+    background-color: $mainColor;
+    margin: 0 !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    text-align-last: center;
+    border: none;
+  }
+}

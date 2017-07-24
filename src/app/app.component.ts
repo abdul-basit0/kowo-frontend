@@ -11,6 +11,8 @@ import { SignUpIPage } from '../pages/signupI/signupI';
 import { SignUpIIPage } from '../pages/signupII/signupII';
 import { SignUpIIIPage } from '../pages/signupIII/signupIII';
 import { createRidePage } from '../pages/createRide/createRide';
+import { InboxDetailPage } from '../pages/inboxDetails/inboxDetails';
+import { SendEvidencePage } from '../pages/sendEvidence/sendEvidence';
 
 import { ProfilePage } from '../pages/profile/profile';
 
@@ -45,11 +47,11 @@ export class MyApp {
         },
           {
             name: 'Manage Rating',
-            link: ''
+            link: InboxDetailPage
           },
           {
             name: 'Contact Us',
-            link: ''
+            link: SendEvidencePage
           }]
       },
       {

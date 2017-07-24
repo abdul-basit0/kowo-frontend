@@ -1,0 +1,46 @@
+page-inboxDetails {
+  font-family: 'ubuntulight', sans-serif;
+  letter-spacing: 0.8px;
+
+  .fixed-content {
+    background: #fff;
+  }
+
+
+  .topHeading {
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'ubunturegular';
+      color: #4ac7cc;
+      font-size: 1em;
+    }
+  }
+
+  .notificationDetail {
+    .trashIcon {
+      color: #4ac7cc;
+      float: right;
+      font-size: 30px;
+    }
+
+    span {
+      color: #4ac7cc;
+      font-size: 15px;
+    }
+  }
+  .notification {
+    p {
+      color: #4ac7cc;
+      font-size: 15px;
+    }
+  }
+
+  .description {
+    p {
+      color: #000;
+      letter-spacing: 0.8px;
+    }
+  }
+}
+//End of main element
