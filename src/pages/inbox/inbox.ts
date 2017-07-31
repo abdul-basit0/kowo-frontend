@@ -11,8 +11,12 @@ export class InboxPage {
 
   refreshTime;
   constructor(public navCtrl: NavController) {
-
+    this.refreshTime = null;
+    // if(this.refreshTime == null) {
+    //   this.refreshTime = new Date();
+    // }
   }
+
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
     // console.log('Begin async operation', new Date(refresher._lastCheck).getTime);

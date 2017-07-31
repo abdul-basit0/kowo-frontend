@@ -13,6 +13,9 @@ page-profile {
     color: #fff;
     margin: 0 0 10px !important;
   }
+  ion-col {
+        padding-right: 0;
+  }
 
   .item-md {
     background: transparent !important;
@@ -144,6 +147,9 @@ page-profile {
     }
   }
 
+  .rowAlign {
+    margin-bottom: 10px;
+  }
   .customIcon {
     text-align: center;
     margin-top: 0.9%;
@@ -216,6 +222,7 @@ page-profile {
 
   .geo {
     background-color: #4ac7cc;
+    // display: inherit;
   }
 
   .iconLeft {
@@ -233,5 +240,58 @@ page-profile {
     padding-top: 16px;
     color: white;
   }
+
+  .workArrivalTimePicker {
+    display: table;
+    width: 100%;
+        margin: 4px;
+
+    .label_time,
+    .timeIconRight,
+    ion-datetime {
+      display: table-cell;
+    }
+
+    ion-datetime {
+      // width: 89%;
+      text-align: left;
+    }
+
+    .timeIconRight {
+      float: right;
+          vertical-align: middle;
+          font-size: 0.9em;
+        color: white;
+    }
+    .label_time {
+      color: #2a7a7d;
+          width: 47%;
+    }
+
+    .datetime-text {
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+  // .timeIconRight {
+  //   background-color: #4ac7cc;
+  //   font-size: 0.9em;
+  //   float: right;
+  //   padding-bottom: 13px;
+  //   color: white;
+  // }
+  //
+  //   .label_time {
+  //     float: left !important;
+  //     color: #2a7a7d;
+  //     font-family: 'ubuntulight';
+  //     padding-top: 13px;
+  //   }
+  //
+  //   .datetime-md {
+  //     text-align: center;
+  //     padding: 0 !important;
+  //     color: white;
+  //   }
 }
 //End of main element

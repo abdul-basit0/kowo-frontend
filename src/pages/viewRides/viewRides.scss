@@ -1,0 +1,102 @@
+page-viewRides {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: 'ubuntulight', sans-serif;
+  letter-spacing: 0.8px;
+
+  .topDetails {
+    text-align: center;
+
+    h2 {
+      font-size: 1em;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      text-transform: uppercase;
+      font-family: 'ubunturegular';
+      color: #4ac7cc;
+    }
+  }
+
+  .rideBox {
+    // display: table;
+    border-spacing: 10px;
+    background: #fff;
+    margin-bottom: 10px;
+
+    .callIcon,
+    .driverIcon,
+    .rideDescription {
+      display: table-cell;
+    }
+
+    .driverIcon {
+      i {
+        color: #4ac7cc;
+      }
+    }
+
+    .rideDescription {
+      width: 100%;
+      font-size: 0.8em;
+      vertical-align: top;
+
+      span {
+        color: #444;
+      }
+
+      .rideInnerDescription {
+        color: #4ac7cc;
+      }
+
+      .rideInnerId {
+        color: #444;
+      }
+    }
+
+    .callIcon {
+      position: relative;
+
+      .callIc {
+        color: #fff;
+        background: #4ac7cc;
+        padding: 10px;
+        border-radius: 50%;
+      }
+    }
+
+    .downArrow {
+      text-align: center;
+      color: #4ac7cc;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .buttons {
+      button {
+        padding: 13px 10px;
+        width: 100%;
+        transition: none;
+        background: transparent;
+        font-size: 16px;
+        color: #fff;
+        text-transform: capitalize;
+        @media only screen and (max-width: 480px) {
+          font-size: 11.4px;
+          padding: 13px 0 13px 0;
+        }
+      }
+
+      .cancelRequestBtn {
+        background-color: #2a7a7d;
+        border-radius: 2px;
+      }
+
+      .viewPositionBtn {
+        background-color: #4ac7cc;
+        border-radius: 2px;
+      }
+    }
+  }
+}

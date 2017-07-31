@@ -43,7 +43,6 @@ page-login {
       margin: 0 !important;
     }
 
-
     .item-md {
       background: transparent !important;
     }
@@ -77,6 +76,55 @@ page-login {
     ion-label {
       text-align: center;
     }
+  }
+}
+
+.forgotPopup {
+  letter-spacing: 0.8px;
+
+  .alert-title {
+    color: #4ac7cc;
+    text-transform: uppercase;
+    font-family: 'ubuntumedium';
+    font-size: 15px;
+  }
+
+  input {
+    font-family: 'ubuntulight';
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #4ac7cc;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+
+    &:focus {
+      border-bottom: none !important;
+    }
+  }
+
+  .alert-input-group {
+    padding-bottom: 0;
+  }
+
+  .alert-button {
+    font-family: 'ubuntulight';
+    width: 70%;
+        max-width: 70%;
+    background-color: #2a7a7d;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-size: 1em;
+
+    .button-inner {
+      justify-content: center !important;
+    }
+  }
+  .alert-button-group {
+    justify-content: center;
   }
 }
 //End of main element

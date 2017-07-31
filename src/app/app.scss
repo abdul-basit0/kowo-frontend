@@ -67,6 +67,46 @@ body {
   ::placeholder {
     color: #fff !important;
   }
+
+  .contactPopup {
+    font-family: 'ubuntulight', sans-serif;
+    letter-spacing: 0.8px;
+
+    h3 {
+      color: #4ac7cc;
+      text-transform: uppercase;
+      font-family: 'ubuntumedium';
+      text-align: center;
+      font-size: 15px;
+    }
+
+    span {
+      color: #4ac7cc;
+    }
+
+    .alert-button-group {
+      width: 100%;
+      display: table;
+      text-align: center;
+
+      button {
+        width: 46%;
+        display: table-cell !important;
+        text-transform: capitalize;
+        background-color: #2a7a7d;
+
+        span {
+          color: #fff;
+          justify-content: center !important;
+          
+        }
+      }
+    }
+
+    .alert-message {
+      overflow-y: hidden;
+    }
+  }
 }
 @font-face {
   font-family: 'ubuntubold';

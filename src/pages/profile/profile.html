@@ -65,8 +65,8 @@
         <ion-col col-11 class="geo customCol">
           <div class="homeAddressContent">
             <i class="icon-home kowoIconFamily iconLeft"></i>
-            <ion-input type="text" [(ngModel)]="autocomplete.home" placeholder="Home" class="inputGeo" (ngModelChange)="updateHomeAddress()"></ion-input>
-            <i class="icon-edit kowoIconFamily iconRight"></i>
+            <ion-input type="text" [(ngModel)]="autocomplete.home" placeholder="Home" class="inputGeo" (ngModelChange)="updateHomeAddress()" [readonly]="!homeToggle"></ion-input>
+            <i class="icon-edit kowoIconFamily iconRight" (click)="makeEditHome()"></i>
             <div class="autocompleteContent">
               <ion-item *ngFor="let item of autocompleteHome" tappable (click)="chooseHomeAddress(item)">
                 {{ item }}
@@ -80,8 +80,8 @@
         <ion-col col-11 class="geo customCol">
           <div class="destinationAddressContent">
             <i class="icon-work kowoIconFamily iconLeft"></i>
-            <ion-input type="text" [(ngModel)]="autocomplete.destination" placeholder="Destination" class="inputGeo" (ngModelChange)="updateDestinationAddress()"></ion-input>
-            <i class="icon-edit kowoIconFamily iconRight"></i>
+            <ion-input type="text" [(ngModel)]="autocomplete.destination" placeholder="Destination" class="inputGeo" (ngModelChange)="updateDestinationAddress()" [readonly]="!workToggle"></ion-input>
+            <i class="icon-edit kowoIconFamily iconRight" (click)="makeEditWork()"></i>
             <div class="autocompleteContent">
               <ion-item *ngFor="let item of autocompleteDestination" tappable (click)="chooseDestinationAddress(item)">
                 {{ item }}
@@ -91,7 +91,21 @@
         </ion-col>
         <ion-col col-1 class="geoicon customIcon"><i class="icon-geolocalize kowoIconFamily" (click)='getCurrLocationWork()'></i></ion-col>
       </ion-row>
+      <ion-row class="rowAlign" >
+        <ion-col col-12 class="geo workArrivalTimePicker">
+          <label class="label_time">I begin work at</label>
+          <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+          <i class="icon-edit kowoIconFamily timeIconRight"></i>
+        </ion-col>
+      </ion-row>
 
+      <ion-row class="rowAlign" >
+        <ion-col col-12 class="geo workArrivalTimePicker">
+          <label class="label_time">I leave work at</label>
+          <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+          <i class="icon-edit kowoIconFamily timeIconRight"></i>
+        </ion-col>
+      </ion-row>
 
       <ion-row radio-group class="preferenceRadioButton" [(ngModel)]="carPreference" (ionChange)="checkPref()">
         <ion-col col-auto>

@@ -2,6 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AlertController } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 import { HomePage } from '../pages/home/home';
 import { AuthPage } from '../pages/auth/login';
@@ -13,6 +16,9 @@ import { SignUpIIIPage } from '../pages/signupIII/signupIII';
 import { createRidePage } from '../pages/createRide/createRide';
 import { InboxDetailPage } from '../pages/inboxDetails/inboxDetails';
 import { SendEvidencePage } from '../pages/sendEvidence/sendEvidence';
+import { viewRidesPage } from '../pages/viewRides/viewRides';
+
+import { RatingPage } from '../pages/rating/rating';
 
 import { ProfilePage } from '../pages/profile/profile';
 
@@ -23,19 +29,19 @@ export class MyApp {
   isVisible = false;
   @ViewChild(Nav) nav: Nav;
 
- rootPage: any = HomePage;
+  rootPage: any = HomePage;
 
 
- pages: Array<{ title: string, component: any, image: string, child: [{ name: string, link: any }] }>;
+  pages: Array<{ title: string, component: any, image: string, child: [{ name: string, link: any }] }>;
 
- constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private alertCtrl: AlertController, private callNumber: CallNumber, private emailComposer: EmailComposer) {
     this.initializeApp();
 
 
-   // used for an example of ngFor and navigation
+    // used for an example of ngFor and navigation
     this.pages = [
       {
-        title: 'Create A Ride', component: HomePage, image: 'icon-driver', child: [{
+        title: 'Create A Ride', component: AuthPage, image: 'icon-driver', child: [{
           name: '',
           link: ''
         }]
@@ -47,7 +53,7 @@ export class MyApp {
         },
           {
             name: 'Manage Rating',
-            link: InboxDetailPage
+            link: RatingPage
           },
           {
             name: 'Contact Us',
@@ -55,7 +61,7 @@ export class MyApp {
           }]
       },
       {
-        title: 'All my rides', component: '', image: 'icon-my-rides', child: [{
+        title: 'All my rides', component: viewRidesPage, image: 'icon-my-rides', child: [{
           name: '',
           link: ''
         }]
@@ -100,7 +106,7 @@ export class MyApp {
         }]
       },
       {
-        title: 'Send Evidence', component: '', image: 'icon-send-evidence', child: [{
+        title: 'Send Evidence', component: SendEvidencePage, image: 'icon-send-evidence', child: [{
           name: '',
           link: ''
         }]
@@ -113,9 +119,9 @@ export class MyApp {
       }
     ];
 
- }
+  }
 
- initializeApp() {
+  initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -127,15 +133,47 @@ export class MyApp {
     this.isVisible = !this.isVisible;
   }
 
- openPage(page) {
-    console.log(page);
+  openPage(page) {
+
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
   openChild(child) {
+    if (child.name == "Contact Us") {
+      let alert = this.alertCtrl.create({
+        title: '<h3>A Question About Kowo</h3>',
+        message: '<span>If your question is not in our FAQ, feel free to contact us.</span>',
+        cssClass: 'contactPopup',
+        buttons: [
+          {
+            text: 'Call info line',
+            role: 'cancel',
+            handler: () => {
+              this.callNumber.callNumber("18001010101", true)
+                .then(() => console.log('Launched dialer!'))
+                .catch(() => console.log('Error launching dialer'));
+            }
+          },
+          {
+            text: 'Send an email',
+            handler: () => {
+              let email = {
+                to: 'test@kowo.com'
+              };
+
+              // Send a text message using default options
+              this.emailComposer.open(email);
+            }
+          }
+        ]
+      });
+      alert.present();
+    } else {
+      this.nav.setRoot(child.link);
+    }
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(child.link);
+
   }
 }

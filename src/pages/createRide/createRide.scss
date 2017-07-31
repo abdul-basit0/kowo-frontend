@@ -7,255 +7,278 @@ page-createRide {
     }
   }
 
-
-   .checkbox-item {
-      background-color: #fff;
-      color: #2a7a7d;
-      width: 35px;
-      height: 35px;
-
-     border-radius: 50%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-     align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-    }
-
-.detourTime{
-    text-align: left;
-    color:rgb(42, 122, 125);
-}
-.seatsAva{
-    text-align: right;
-    color:rgb(42, 122, 125);
-}
-    label.coolbox {
-
-
-    margin:2px;
-    display:inline-block;
-    width:35px;
-    height:33px;
-    border-radius:50%;
-    line-height:30px;
-    text-align:center;
-    vertical-align:middle;
-    font-weight:bold;
-    font-size:20px;
-}
-.ion-md-remove:before {
-
-    font-size: 1.7em;
-
-}
-.ion-md-add:before {
-
-    font-size: 1.7em;
-}
-.spacer{
-
-  width:6.94%;
-  // @media only screen and (max-width: 320px) {
-  //      width: 5.94%;
-  //    }
-  @media only screen and (max-width: 480px) {
-       width: 5.94%;
-     }
-}
-.weekDay{
-
-text-align:center;
-
-}
-
-.checkbox-md .checkbox-icon {
-
-    border:2px solid grey !important;
+  .checkbox-item {
+    background-color: #fff;
+    color: #2a7a7d;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    width:30px;
-    height:30px;
-}
-.checkbox-md .checkbox-checked .checkbox-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .detourTime {
+    text-align: left;
+    color: rgb(42, 122, 125);
+  }
+
+  .seatsAva {
+    text-align: right;
+    color: rgb(42, 122, 125);
+  }
+
+  label.coolbox {
+    margin: 2px;
+    display: inline-block;
+    width: 35px;
+    height: 33px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .ion-md-remove:before {
+    font-size: 1.7em;
+  }
+
+  .ion-md-add:before {
+    font-size: 1.7em;
+  }
+
+  .spacer {
+    width: 6.94%;
+    // @media only screen and (max-width: 320px) {
+    //      width: 5.94%;
+    //    }
+    @media only screen and (max-width: 480px) {
+      width: 5.94%;
+    }
+  }
+
+  .weekDay {
+    text-align: center;
+  }
+
+  .checkbox-md .checkbox-icon {
+    border: 2px solid grey !important;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .checkbox-md .checkbox-checked .checkbox-inner {
     border-color: grey;
     left: 8px;
     top: 3px;
     width: 7px;
     height: 15px;
-}
+  }
 
-.iconLeft{
+  .iconLeft {
+    background-color: #4ac7cc;
+    color: white;
+    font-size: 0.9em;
+    float: left;
+    padding-top: 16px;
+  }
 
+  .iconRight {
+    background-color: #4ac7cc;
+    font-size: 0.9em;
+    float: right;
+    padding-top: 16px;
+    color: white;
+  }
 
-background-color:#4ac7cc;
-color:white;
-  font-size: 0.9em;
-  float:left;
-  padding-top:16px;
-}
+  .iconLeftMinus {
+    background-color: #4ac7cc;
+    color: rgb(42, 122, 125);
+    font-size: 0.9em;
+    float: left;
+    padding-top: 12px;
+    cursor: pointer;
+  }
 
-.iconRight{
+  .iconRightPlus {
+    background-color: #4ac7cc;
+    font-size: 0.9em;
+    float: right;
+    padding-top: 12px;
+    color: rgb(42, 122, 125);
+    cursor: pointer;
+  }
 
+  // .label_time {
+  //   float: left !important;
+  //   color: #2a7a7d;
+  //   font-family: 'ubuntulight';
+  //   padding-top: 13px;
+  // }
+  //
+  // .datetime-md {
+  //   padding: 0 !important;
+  //   color: white;
+  // }
+  //
+  // .timeIconRight {
+  //   background-color: #4ac7cc;
+  //   font-size: 0.9em;
+  //   float: right;
+  //   padding-bottom: 13px;
+  //   color: white;
+  // }
+  .workArrivalTimePicker {
+    display: table;
+    width: 100%;
 
-  background-color:#4ac7cc;
-  font-size: 0.9em;
-  float:right;
-  padding-top:16px;
-  color:white;
+    .label_time,
+    .timeIconRight,
+    ion-datetime {
+      display: table-cell;
+    }
 
-}
+    ion-datetime {
+      // width: 89%;
+      text-align: left;
+    }
 
-.iconLeftMinus{
-
-
-  background-color:#4ac7cc;
-  color:rgb(42, 122, 125);
-  font-size: 0.9em;
-  float:left;
-  padding-top:12px;
-  cursor:pointer;
-}
-
-.iconRightPlus{
-
-
-  background-color:#4ac7cc;
-  font-size: 0.9em;
-  float:right;
-  padding-top:12px;
-  color:rgb(42, 122, 125);
-  cursor:pointer;
-
-}
-.label_time{
-
-  float:left !important;
-  color: #2a7a7d;
-  font-family: 'ubuntulight';
-  padding-top:13px;
-}
-.datetime-md {
-    padding: 0 !important;
-    color:white;
-}
-.timeIconRight{
-  background-color:#4ac7cc;
-  font-size: 0.9em;
-  float:right;
-  padding-bottom:13px;
-  color:white;
-
-}
-.iconMinus{
-  font-weight:bolder;
-  font-style: normal;
-  float:left;
-  size:10px;
-}
-.iconPlus{
-  font-weight:bolder;
-  font-style: normal;
-  float: right;
-  size:10px;
-}
-
-.inputGeo{
-
-  display:inline-block;
-  width:88%;
-}
-
-.inputRange{
-
-  display:inline-block;
-  width:50%;
-  cursor:pointer;
-}
-.text-input[disabled] {
-    opacity: 4;
-
-}
-.geo{
-
-  background-color:#4ac7cc;
-
-}
-.checkboxDes{
-      text-transform: uppercase;
-      font-family: 'ubunturegular';
-      font-size: 0.9em;
+    .timeIconRight {
+      float: right;
+          vertical-align: middle;
+          font-size: 0.9em;
+        color: white;
+    }
+    .label_time {
       color: #2a7a7d;
-      vertical-align: 10px;
-      cursor: pointer;
-}
+          width: 47%;
+    }
 
+    .datetime-text {
+      font-weight: bold;
+      color: #fff;
+    }
+  }
 
-.rightIcon{
-text-align: right;
-background-color:#4ac7cc;
-color:white;
+  .iconMinus {
+    font-weight: bolder;
+    font-style: normal;
+    float: left;
+    size: 10px;
+  }
 
-}
-.checkbox_align{
-  text-align:center;
-}
+  .iconPlus {
+    font-weight: bolder;
+    font-style: normal;
+    float: right;
+    size: 10px;
+  }
 
-.item.item-md .checkbox-md {
+  .inputGeo {
+    display: inline-block;
+    width: 88%;
+  }
 
+  .inputRange {
+    display: inline-block;
+    width: 50%;
+    cursor: pointer;
+  }
 
-    margin: 0px 4px;
-}
-.checkbox-md .checkbox-checked {
+  .text-input[disabled] {
+    opacity: 4;
+  }
+
+  .geo {
+    background-color: #4ac7cc;
+  }
+
+  .checkboxDes {
+    text-transform: uppercase;
+    font-family: 'ubunturegular';
+    font-size: 0.9em;
+    color: #2a7a7d;
+    vertical-align: 10px;
+    cursor: pointer;
+  }
+
+  .rightIcon {
+    text-align: right;
+    background-color: #4ac7cc;
+    color: white;
+  }
+
+  .checkbox_align {
+    text-align: center;
+  }
+
+  .item.item-md .checkbox-md {
+    margin: 0 4px;
+  }
+
+  .checkbox-md .checkbox-checked {
     border-color: grey;
     background-color: white;
-}
+  }
 
-.rowAlign {
-    text-align: center;
-    // margin-left: 5px;
-}
+  .rowAlign {
+    margin-bottom: 10px;
+  }
 
-.icon-geolocalize:before {
-
+  .icon-geolocalize:before {
     vertical-align: -9px;
-    color:#2a7a7d;
-}
+    color: #2a7a7d;
+  }
 
-.geoicon{
+  .geoicon {
+    max-width: 6.33333% !important;
+  }
 
-  max-width: 6.33333% !important;
-}
+  .customIcon {
+    max-width: 3.33333% !important;
+  }
 
-.customIcon {
-  max-width: 3.33333% !important;
-}
-
-.customCol {
-  flex: 0 0 96.66667% !important;
+  .customCol {
+    flex: 0 0 96.66667% !important;
     width: 96.66667% !important;
     max-width: 96.66667% !important;
-}
-.checkSpan{
+  }
 
-  min-width:35px;
-  height:33px;
-  border-radius:50%;
-  background:white;
-  padding:10px 14px 10px 14px;
-  font-weight: normal;
-  font-size:12px;
+  .checkSpan {
+    min-width: 35px;
+    height: 33px;
+    border-radius: 50%;
+    background: white;
+    padding: 10px 14px;
+    font-weight: normal;
+    font-size: 12px;
+  }
 
-}
-label.coolbox input {display:none;}
-label.coolbox span {color:#2a7a7d;}
-label.coolbox input:checked + span {color:white;background:#2a7a7d; }
-    .checkbox-md .checkbox-icon {
-        border-style:none;
-    }
+  label.coolbox input {
+    display: none;
+  }
+
+  label.coolbox span {
+    color: #2a7a7d;
+  }
+
+  label.coolbox input:checked + span {
+    color: white;
+    background: #2a7a7d;
+  }
+
+  .checkbox-md .checkbox-icon {
+    border-style: none;
+  }
 
   .item-md {
     background: transparent !important;
@@ -277,11 +300,12 @@ label.coolbox input:checked + span {color:white;background:#2a7a7d; }
       }
     }
   }
+
   .hide {
     display: none;
   }
-.radio__label{
 
+  .radio__label {
     padding-left: 10px;
     text-transform: uppercase;
     font-size: 0.9em;
@@ -289,13 +313,14 @@ label.coolbox input:checked + span {color:white;background:#2a7a7d; }
     font-family: 'ubunturegular';
     font-size: 0.9em;
     font-weight: 500;
-    display:inline-block;
-    margin:0px !important;
-}
-.radio {
-  text-align:center;
+    display: inline-block;
+    margin: 0 !important;
+  }
 
-}
+  .radio {
+    text-align: center;
+  }
+
   .justify--center {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -323,7 +348,6 @@ label.coolbox input:checked + span {color:white;background:#2a7a7d; }
     position: relative;
   }
   //End of main element
-
   .steps-container {
     margin-bottom: 15px;
   }
@@ -342,12 +366,13 @@ label.coolbox input:checked + span {color:white;background:#2a7a7d; }
     margin: 0 !important;
     box-sizing: content-box;
   }
-  .dropDownMen{
+
+  .dropDownMen {
     color: #fff;
     font-family: 'ubuntulight';
     font-size: 15px;
     padding: 13px 8px !important;
-    width:100%;
+    width: 100%;
     background-color: #4ac7cc;
     margin: 0 !important;
     -webkit-appearance: none;
@@ -355,14 +380,10 @@ label.coolbox input:checked + span {color:white;background:#2a7a7d; }
     text-indent: 1px;
     text-overflow: '';
     text-align-last: center;
-    border:none;
+    border: none;
   }
 
-
-
-  .label-md {
-
-}
+  .label-md {}
   /// @prop - Show the focus highlight when the input has focus
   h2 {
     font-size: 1em;

@@ -20,10 +20,14 @@ export class ProfilePage {
   public position: string;
   public homeAddress: string;
   public workAddress: string;
+  homeToggle;
+  workToggle;
   service = new google.maps.places.AutocompleteService();
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, private camera: Camera, private zone: NgZone, private geolocation: Geolocation, private nativeGeocoder: NativeGeocoder) {
     this.autocompleteHome = [];
+    this.homeToggle = false;
+    this.workToggle = false;
     this.autocompleteDestination = [];
     this.showCarProperties = false;
     this.autocomplete = {
@@ -42,6 +46,13 @@ export class ProfilePage {
     } else if(this.carPreference == "noCar"){
       this.showCarProperties = false;
     }
+  }
+
+  makeEditHome() {
+    this.homeToggle=!this.homeToggle;
+  }
+  makeEditWork() {
+    this.workToggle=!this.workToggle;
   }
   openImageLoader() {
     let alert = this.alertCtrl.create({

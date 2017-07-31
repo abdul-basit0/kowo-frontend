@@ -1,5 +1,6 @@
 <ion-header>
-  <ion-navbar> <!-- color = "red"-->
+  <ion-navbar>
+    <!-- color = "red"-->
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -9,47 +10,61 @@
 <ion-content padding>
   <div class="topDetails">
     <i class="icon-send-evidence kowoIconFamily"></i>
-    <p>Send Evidence</p>
-    <form class="sendEvidenceForm">
-
-      <ion-grid>
-        <ion-row>
-          <ion-col col-12>
-            <label>Planned For</label>
-            <select class="dropDownMen">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="dl">Dutch</option>
-            </select>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col col-12>
-            <label>Cancellation Evidence</label>
-            <select class="dropDownMen">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="dl">Dutch</option>
-            </select>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-6>
-            <div class="galleryOpener">
-
-            </div>
-          </ion-col>
-          <ion-col col-6>
-            <div class="cameraOpener">
-              
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-
-    </form>
-
+    <h2>Send Evidence</h2>
   </div>
+  <form class="sendEvidenceForm">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <label>Planned For</label>
+          <select class="dropDownMen">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="dl">Dutch</option>
+            </select>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>
+          <label>Cancellation Evidence</label>
+          <select class="dropDownMen">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="dl">Dutch</option>
+            </select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <div class="galleryOpener" (click)="openGallery()">
+            <ion-icon ios="ios-images" md="md-images"></ion-icon>
+            <span>Image</span>
+
+
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="cameraOpener" (click)="openCamera()">
+            <ion-icon ios="ios-camera-outline" md="md-camera"></ion-icon>
+            <span>Photo</span>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-input type="text" value="" placeholder="Add a comment" class="commentBox"></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12 class="buttonValidate">
+          <button ion-button [navPush]="homepage">Send</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+
 
 </ion-content>

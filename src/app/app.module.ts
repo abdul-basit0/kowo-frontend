@@ -9,10 +9,14 @@ import { SignUpIPage } from '../pages/signupI/signupI';
 import { SignUpIIPage } from '../pages/signupII/signupII';
 import { SignUpIIIPage } from '../pages/signupIII/signupIII';
 import { createRidePage } from '../pages/createRide/createRide';
+import { RatingPage } from '../pages/rating/rating';
 import { AuthPage } from '../pages/auth/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { InboxDetailPage } from '../pages/inboxDetails/inboxDetails';
 import { SendEvidencePage } from '../pages/sendEvidence/sendEvidence';
+import { viewRidesPage } from '../pages/viewRides/viewRides';
+import { CallNumber } from '@ionic-native/call-number';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 // import { Router } from '@angular/router';
 
@@ -21,6 +25,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IonPullupModule } from 'ionic-pullup';
 import { Geolocation } from '@ionic-native/geolocation';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +39,9 @@ import { Geolocation } from '@ionic-native/geolocation';
     AuthPage,
     ProfilePage,
     InboxDetailPage,
-    SendEvidencePage
+    SendEvidencePage,
+    viewRidesPage,
+    RatingPage
   ],
   imports: [
     BrowserModule,
@@ -54,9 +61,13 @@ import { Geolocation } from '@ionic-native/geolocation';
     AuthPage,
     ProfilePage,
     InboxDetailPage,
-    SendEvidencePage
+    SendEvidencePage,
+    viewRidesPage,
+    RatingPage
   ],
   providers: [
+    CallNumber,
+    EmailComposer,
     StatusBar,
     SplashScreen,
     Geolocation,

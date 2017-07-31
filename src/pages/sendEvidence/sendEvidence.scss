@@ -1,9 +1,49 @@
 page-sendEvidence {
+  text-transform: uppercase;
+  font-family: 'ubuntulight';
+
   .topDetails {
+    text-align: center;
+
     i {
+      vertical-align: middle;
+      color: #4ac7cc;
+    }
+
+    h2 {
+      vertical-align: middle;
+      font-size: 1em;
+      // margin-bottom: 20px !important;
+      margin-top: 10px !important;
+      display: inline-block;
+      text-transform: uppercase;
+      font-family: 'ubunturegular';
       color: #4ac7cc;
     }
   }
+
+  .sendEvidenceForm {
+    label {
+      color: #2a7a7d;
+    }
+  }
+
+  .text-input {
+    box-sizing: content-box;
+    text-align: center;
+    background-color: $mainColor;
+    padding: 13px 8px !important;
+    color: #fff;
+    margin: 0 0 10px !important;
+  }
+
+  .commentBox {
+    .text-input {
+      height: 200px;
+      border-radius: 2px;
+    }
+  }
+
   .dropDownMen {
     color: #fff;
     font-size: 15px;
@@ -15,7 +55,34 @@ page-sendEvidence {
     -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
-    text-align-last: center;
     border: none;
+  }
+
+  .cameraOpener,
+  .galleryOpener {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #2a7a7d;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0;
+    border-radius: 2px;
+    font-size: 16px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      vertical-align: middle;
+      color: #fff !important;
+      text-transform: uppercase;
+    }
+
+    ion-icon {
+      vertical-align: middle;
+      font-size: 24px;
+    }
   }
 }
