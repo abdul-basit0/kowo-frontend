@@ -80,7 +80,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-auto>
+      <ion-col col-auto class="alignCenter">
         <ion-item>
           <ion-label class="checkboxDes">Weekly</ion-label>
           <ion-checkbox></ion-checkbox>
@@ -113,10 +113,10 @@
     </ion-row>
 
     <ion-row>
-      <ion-col col-auto>
+      <ion-col col-auto class="alignCenter">
         <ion-item>
           <ion-label class="checkboxDes">Round Trip</ion-label>
-          <ion-checkbox></ion-checkbox>
+          <ion-checkbox [(ngModel)]="roundTrip"></ion-checkbox>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -126,6 +126,13 @@
     <ion-row class="rowAlign">
       <ion-col col-12 class="geo workArrivalTimePicker">
         <label class="label_time">Work arrival</label>
+        <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+        <i class="icon-edit kowoIconFamily timeIconRight"></i>
+      </ion-col>
+    </ion-row>
+    <ion-row class="rowAlign" *ngIf="roundTrip">
+      <ion-col col-12 class="geo workArrivalTimePicker">
+        <label class="label_time">Departure Time</label>
         <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
         <i class="icon-edit kowoIconFamily timeIconRight"></i>
       </ion-col>
