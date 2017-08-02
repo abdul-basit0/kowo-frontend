@@ -34,11 +34,11 @@
 
 <ion-pullup (onExpand)="footerExpanded()" (onCollapse)="footerCollapsed()" [(state)]="footerState" ng-cancel-drag="false">
     <ion-pullup-tab [footer]="pullup" (tap)="toggleFooter()">
-      <ion-icon name="ios-arrow-up-outline" *ngIf="footerState == 0"></ion-icon><ion-icon name="ios-arrow-down-outline" *ngIf="footerState == 1"></ion-icon>
+      <ion-icon name="ios-arrow-up-outline" *ngIf="footerState == 0"><span>My Matched Rides</span></ion-icon><ion-icon name="ios-arrow-down-outline" *ngIf="footerState == 1"><span>My Matched Rides</span></ion-icon>
     </ion-pullup-tab>
-    <ion-toolbar color="primary" (tap)="toggleFooter()">
+    <!-- <ion-toolbar color="primary" (tap)="toggleFooter()">
       <ion-title>My Matched Rides</ion-title>
-    </ion-toolbar>
+    </ion-toolbar> -->
     <ion-content padding>
       <div class="noRides">
         <span>Call</span>

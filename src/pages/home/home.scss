@@ -85,6 +85,11 @@ ion-pullup {
   font-family: 'ubuntulight', sans-serif;
   letter-spacing: 0.8px;
 
+  ion-content {
+    top: -70px;
+    z-index: 9999999;
+  }
+
   .footer {
     ion-pullup-tab {
       z-index: 1000;
@@ -95,7 +100,7 @@ ion-pullup {
       -ms-flex-pack: center;
       justify-content: center;
       position: relative;
-      height: 9%;
+      height: 25%;
       background: #4ac7cc;
       color: #fff;
       border-radius: 50% 50% 0 0;
@@ -115,13 +120,28 @@ ion-pullup {
     }
   }
 
-  ion-title {
-    font-size: 17px;
+  ion-icon {
     text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
+    &:before {
+      margin-bottom: 10px;
+      display: block;
+    }
+    span {
+      padding-top: 10px;
+      font-family: 'ubuntulight', sans-serif;
+      letter-spacing: 0.8px;
+      font-size: 17px;
+      text-align: center;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
   }
-
+  // ion-title {
+  //   font-size: 17px;
+  //   text-align: center;
+  //   font-weight: 500;
+  //   text-transform: uppercase;
+  // }
   .noRides {
     text-align: center;
 
