@@ -34,12 +34,18 @@
 
 <ion-pullup (onExpand)="footerExpanded()" (onCollapse)="footerCollapsed()" [(state)]="footerState" ng-cancel-drag="false">
     <ion-pullup-tab [footer]="pullup" (tap)="toggleFooter()">
-      <ion-icon name="arrow-up" *ngIf="footerState == 0"></ion-icon><ion-icon name="arrow-down" *ngIf="footerState == 1"></ion-icon>
+      <ion-icon name="ios-arrow-up-outline" *ngIf="footerState == 0"></ion-icon><ion-icon name="ios-arrow-down-outline" *ngIf="footerState == 1"></ion-icon>
     </ion-pullup-tab>
     <ion-toolbar color="primary" (tap)="toggleFooter()">
-      <ion-title>Footer</ion-title>
+      <ion-title>My Matched Rides</ion-title>
     </ion-toolbar>
-    <ion-content>
-    ... FOOTER CONTENT ...
+    <ion-content padding>
+      <div class="noRides">
+        <span>Call</span>
+        <a><img src="assets/image/axa-btn.png" alt="Axa Call"></a>
+        <p class="notRidesFound">You Don't See to have any rides planned at the moment!</p>
+        <p>Changing your preferences might help you to match you!</p>
+        <button >Change Preferences</button>
+      </div>
     </ion-content>
   </ion-pullup>

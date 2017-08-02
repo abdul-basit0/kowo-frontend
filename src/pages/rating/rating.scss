@@ -19,6 +19,7 @@ page-rating {
   .ratingInfo {
     background: #fff;
     h3 {
+      padding-top: 2%;
       text-align: center;
       text-transform: uppercase;
       color: #2a7a7d;
@@ -35,10 +36,14 @@ page-rating {
       float: left;
     }
 
-    a {
+    span {
+      text-decoration: underline;
       float: right;
       font-size: 0.8em;
       color: #2a7a7d;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 

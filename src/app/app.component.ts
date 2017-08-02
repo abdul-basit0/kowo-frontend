@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AlertController } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { MenuController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
 import { AuthPage } from '../pages/auth/login';
@@ -34,7 +35,7 @@ export class MyApp {
 
   pages: Array<{ title: string, component: any, image: string, child: [{ name: string, link: any }] }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private alertCtrl: AlertController, private callNumber: CallNumber, private emailComposer: EmailComposer) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private alertCtrl: AlertController, private callNumber: CallNumber, private emailComposer: EmailComposer, private menuCtrl :MenuController) {
     this.initializeApp();
 
 
@@ -138,6 +139,7 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+    this.menuCtrl.close();
   }
   openChild(child) {
     if (child.name == "Contact Us") {

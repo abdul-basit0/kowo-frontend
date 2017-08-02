@@ -5,10 +5,10 @@ page-home {
     .dashboardImage {
       img {
         height: 60px;
-        @media only screen and (max-width: 320px) {
+        @media only screen and (max-width: 480px) {
           height: 50px;
         }
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: 320px) {
           height: 50px;
         }
       }
@@ -31,21 +31,21 @@ page-home {
         text-align: center;
         color: #4ac7cc;
         font-size: 70px;
-        @media only screen and (max-width: 320px) {
-          font-size: 30px;
+        @media only screen and (max-width: 768px) {
+          font-size: 50px;
         }
         @media only screen and (max-width: 480px) {
           font-size: 40px;
         }
-        @media only screen and (max-width: 768px) {
-          font-size: 50px;
+        @media only screen and (max-width: 320px) {
+          font-size: 30px;
         }
       }
-      @media only screen and (max-width: 320px) {
-        width: 60px;
-        height: 55px;
-        min-width: 60px;
-        min-height: 55px;
+      @media only screen and (max-width: 768px) {
+        width: 80px;
+        height: 75px;
+        min-width: 80px;
+        min-height: 75px;
       }
       @media only screen and (max-width: 480px) {
         width: 70px;
@@ -53,11 +53,11 @@ page-home {
         min-width: 70px;
         min-height: 65px;
       }
-      @media only screen and (max-width: 768px) {
-        width: 80px;
-        height: 75px;
-        min-width: 80px;
-        min-height: 75px;
+      @media only screen and (max-width: 320px) {
+        width: 60px;
+        height: 55px;
+        min-width: 60px;
+        min-height: 55px;
       }
     }
 
@@ -72,10 +72,88 @@ page-home {
         text-decoration: none;
       }
     }
+
     .seperator {
-        @media only screen and (min-width: 768px) and (max-height: 670px) {
-            margin-bottom: 6%;
-        }
+      @media only screen and (max-width: 768px) and (max-height: 670px) {
+        margin-bottom: 6%;
+      }
+    }
+  }
+}
+
+ion-pullup {
+  font-family: 'ubuntulight', sans-serif;
+  letter-spacing: 0.8px;
+
+  .footer {
+    ion-pullup-tab {
+      z-index: 1000;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: relative;
+      height: 9%;
+      background: #4ac7cc;
+      color: #fff;
+      border-radius: 50% 50% 0 0;
+      margin: 0 auto;
+      width: 100%;
+      padding-top: 8px;
+    }
+  }
+
+  .fixed-content {
+    background: #4ac7cc;
+  }
+
+  .toolbar-md-primary {
+    .toolbar-background-md {
+      background: #4ac7cc;
+    }
+  }
+
+  ion-title {
+    font-size: 17px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .noRides {
+    text-align: center;
+
+    a {
+      display: block;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .notRidesFound,
+    span {
+      font-size: 17px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    p {
+      font-size: 15px;
+      color: #fff;
+    }
+
+    button {
+      font-family: 'ubuntulight';
+      width: 100%;
+      padding: 12px 0;
+      background-color: #2a7a7d;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 0;
+      border-radius: 2px;
     }
   }
 }
