@@ -1,6 +1,12 @@
 
 
-
+<ion-header>
+  <ion-navbar> <!-- color = "red"-->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
 
     <ion-content padding>
         <div class="content content--smaller flex flex--column justify--center">
@@ -14,81 +20,46 @@
                   <div class="steps__bullet active"></div>
               </div>
             </div>
-            <form (ngSubmit)="logForm()">
+            <!-- <form> -->
 
               <ion-grid>
 
-                <ion-row radio-group>
+                <ion-row radio-group class="preferenceRadioButton" [(ngModel)]="carPreference" (ionChange)="checkPref()">
+                  <ion-col col-auto>
 
-                  <ion-col col-12>
+                    <ion-item>
+                      <ion-label>My Own Car</ion-label>
+                      <ion-radio item-left value="myOwnCar" checked></ion-radio>
 
-                        <ion-radio checked="true" value="owncar" float class="radio-custom"></ion-radio>
-                        <ion-label class="radio__label" value="owncar">My Own Car</ion-label>
-
-
-
-
-
-                        <ion-radio value="nocar" float class="radio-custom"></ion-radio>
-                        <ion-label class="radio__label" value="nocar">I Dont Have A Car</ion-label>
-
-
-
-
-
-                        <ion-radio  value="companycar" float class="radio-custom"></ion-radio>
-                        <ion-label class="radio__label" value="companycar">Company Car</ion-label>
-
-                  </ion-col>
-
-
-
-                    </ion-row>
-
-                <ion-row>
-                  <ion-col col-12>
-
-                    <select class="dropDownMen">
-                      <option value="en">English</option>
-                      <option value="fr">French</option>
-                      <option value="dl">Dutch</option>
-
-                    </select>
-
-                </ion-col>
-                </ion-row>
-
-                <ion-row>
-                  <ion-col col-12>
-
-                      <ion-input type="email" value="" placeholder="Pro Email Address"></ion-input>
-
+                    </ion-item>
+                    <ion-item>
+                      <ion-label>Company Car</ion-label>
+                      <ion-radio item-left value="companyCar"></ion-radio>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label>I don't have a car</ion-label>
+                      <ion-radio item-left value="noCar"></ion-radio>
+                    </ion-item>
                   </ion-col>
                 </ion-row>
+                <div *ngIf="showCarProperties">
+                  <ion-row>
+                    <ion-col col-md-12>
+                      <ion-input type="text" value="" placeholder="Car Name"></ion-input>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col col-md-12>
+                      <ion-input type="text" value="" placeholder="Model Number"></ion-input>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col col-md-12>
+                      <ion-input type="text" value="" placeholder="Plate Number"></ion-input>
+                    </ion-col>
+                  </ion-row>
+                </div>
 
-                <ion-row>
-                  <ion-col col-12>
-
-                        <ion-input type="text" placeholder="First Name"></ion-input>
-
-                  </ion-col>
-                </ion-row>
-
-                <ion-row>
-                  <ion-col col-12>
-
-                      <ion-input type="text" placeholder="Last Name"></ion-input>
-
-                  </ion-col>
-                </ion-row>
-
-                <ion-row>
-                  <ion-col col-12>
-
-                      <ion-input type="text" placeholder="Phone Number" ></ion-input>
-
-                  </ion-col>
-                </ion-row>
 
                 <ion-row>
                   <ion-col col-12 class="buttonValidate">
@@ -102,7 +73,7 @@
 
 
 
-    </form>
+    <!-- </form> -->
 
           </div>
 

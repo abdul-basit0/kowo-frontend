@@ -1,17 +1,9 @@
+$mainColor: #4ac7cc;
+
 page-signupII {
-  .steps__bullet {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #4ac7cc;
-    background-color: #fff;
-    margin: 0 5px;
-  }
-
-  .steps__bullet.active {
-    background-color: #4ac7cc;
-  }
-
+  font-size: 15px;
+  font-family: 'ubuntulight', sans-serif;
+  letter-spacing: 0.8px;
   .registerLogo {
     text-align: center;
 
@@ -19,112 +11,6 @@ page-signupII {
       height: 60px;
     }
   }
-
-
-
-  .item-md {
-    background: transparent !important;
-  }
-
-  .buttonValidate {
-    button {
-      width: 100%;
-      margin: 30px 0 10px;
-      padding: 0;
-      background-color: #2a7a7d;
-      color: #fff;
-      text-transform: uppercase;
-      border-radius: 0;
-      border-radius: 2px;
-
-      &:hover {
-        background-color: #2a7a7d !important;
-      }
-    }
-  }
-
-.radio__label{
-
-    padding-left: 10px;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    color: #2a7a7d;
-    font-weight: 500;
-    display:inline-block;
-    margin:0px !important;
-}
-.radio {
-  text-align:center;
-
-}
-  .justify--center {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .flex--column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .content--smaller {
-    padding: 20px 10px 10px;
-  }
-
-  .content {
-    position: relative;
-  }
-  //End of main element
-
-  .steps-container {
-    margin-bottom: 15px;
-  }
-
-  .item-md {
-    background: transparent !important;
-  }
-
-  .text-input {
-    font-family: 'ubuntulight';
-    font-size: 15px;
-    text-align: center;
-    background-color: #4ac7cc;
-    padding: 13px 8px !important;
-    color: #fff;
-    margin: 0 !important;
-    box-sizing: content-box;
-  }
-  .dropDownMen{
-    color: #fff;
-    font-family: 'ubuntulight';
-    font-size: 15px;
-    padding: 13px 8px !important;
-    width:100%;
-    background-color: #4ac7cc;
-    margin: 0 !important;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
-    text-align-last: center;
-    border:none;
-  }
-
-
-
-  .label-md {
-
-}
-  /// @prop - Show the focus highlight when the input has focus
   h2 {
     font-size: 1em;
     margin-bottom: 20px !important;
@@ -140,36 +26,225 @@ page-signupII {
     color: #4ac7cc;
   }
 
+  .text-input {
+    box-sizing: content-box;
+    text-align: center;
+    background-color: $mainColor;
+    padding: 13px 8px !important;
+    color: #fff;
+    margin: 0 0 10px !important;
+  }
+  ion-col {
+        padding-right: 0;
+  }
+
+  .item-md {
+    background: transparent !important;
+  }
+
+  .item-toggle {
+    ion-label {
+      color: #2a7a7d;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+  }
+
   .item-inner {
     padding-right: 0 !important;
     border-bottom: none !important;
   }
 
-  ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: #fff !important;
-    font-family: 'ubuntulight' !important;
-    font-size: 15px !important;
+
+  .header {
+    text-align: center;
+    font-family: 'ubunturegular';
+
+    h2 {
+      font-size: 1em;
+      text-transform: uppercase;
+      color: $mainColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 0;
+    }
+
+    i {
+      font-size: 1.8em;
+      color: $mainColor;
+    }
   }
 
-  ::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #fff !important;
-    font-family: 'ubuntulight' !important;
-    font-size: 15px !important;
+  .autocompleteContent {
+    background: #fff;
   }
 
-  :-ms-input-placeholder {
-    /* IE 10+ */
-    color: #fff !important;
-    font-family: 'ubuntulight' !important;
-    font-size: 15px !important;
+  .homeAddressContent {
+    position: relative;
+
+    .autocompleteContent {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 9999999999999999;
+    }
+
+    input {
+      margin-bottom: 0 !important;
+    }
   }
 
-  :-moz-placeholder {
-    /* Firefox 18- */
-    color: #fff !important;
-    font-family: 'ubuntulight' !important;
-    font-size: 15px !important;
+  .destinationAddressContent {
+    position: relative;
+
+    .autocompleteContent {
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 9999999999999999;
+    }
+
+    input {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .geoicon {
+    max-width: 6.33333% !important;
+
+    i {
+      vertical-align: middle;
+      color: #2a7a7d;
+    }
+  }
+
+  .rowAlign {
+    margin-bottom: 10px;
+  }
+  .customIcon {
+    text-align: center;
+    margin-top: 0.9%;
+    max-width: 4% !important;
+    @media only screen and (max-width: 480px) {
+      margin-top: 2.9%;
+    }
+  }
+
+  .customCol {
+    margin: 5px;
+    flex: 0 0 94.66667% !important;
+    width: 94.66667% !important;
+    max-width: 94.66667% !important;
+    @media only screen and (max-width: 767px) {
+      flex: 0 0 91.66667% !important;
+      width: 91.66667% !important;
+      max-width: 91.66667% !important;
+    }
+    @media only screen and (max-width: 480px) {
+      flex: 0 0 86.66667% !important;
+      width: 86.66667% !important;
+      max-width: 86.66667% !important;
+    }
+  }
+
+  .inputGeo {
+    display: inline-block !important;
+    width: 88% !important;
+    @media only screen and (max-width: 480px) {
+      width: 85% !important;
+    }
+  }
+
+  .radio-md .radio-inner {
+    background: transparent !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  .radio-md .radio-icon {
+    width: 24px !important;
+    height: 24px !important;
+    border-color: #2a7a7d !important;
+    background: #fff !important;
+  }
+
+  .radio-md .radio-inner:before {
+    content: "\2713";
+    position: absolute;
+    top: -3px;
+    color: #000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+  }
+
+  .preferenceRadioButton {
+    .item-md {
+      font-size: 15px;
+      color: #2a7a7d !important;
+      text-transform: uppercase;
+    }
+
+    .item-radio-checked.item-md ion-label {
+      color: #2a7a7d !important;
+    }
+  }
+
+  .geo {
+    background-color: #4ac7cc;
+    // display: inherit;
+  }
+
+  .iconLeft {
+    background-color: #4ac7cc;
+    color: white;
+    font-size: 0.9em;
+    float: left;
+    padding-top: 16px;
+  }
+
+  .iconRight {
+    background-color: #4ac7cc;
+    font-size: 0.9em;
+    float: right;
+    padding-top: 16px;
+    color: white;
+  }
+
+  .workArrivalTimePicker {
+    display: table;
+    width: 100%;
+        margin: 4px;
+
+    .label_time,
+    .timeIconRight,
+    ion-datetime {
+      display: table-cell;
+    }
+
+    ion-datetime {
+      // width: 89%;
+      text-align: left;
+    }
+
+    .timeIconRight {
+      float: right;
+          vertical-align: middle;
+          font-size: 0.9em;
+        color: white;
+    }
+    .label_time {
+      color: #2a7a7d;
+          width: 47%;
+    }
+
+    .datetime-text {
+      font-weight: bold;
+      color: #fff;
+    }
   }
 }
+//End of main element

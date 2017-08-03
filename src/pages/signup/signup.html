@@ -1,6 +1,12 @@
 
 
-
+<ion-header>
+  <ion-navbar> <!-- color = "red"-->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
 
     <ion-content padding>
         <div class="content content--smaller flex flex--column justify--center">
@@ -8,19 +14,30 @@
             <h2 align="center"> Register</h2>
             <div class="steps-container">
               <div class="steps flex justify--center">
+                  <div class="steps__bullet"></div>
+                  <div class="steps__bullet"></div>
                   <div class="steps__bullet active"></div>
-                  <div class="steps__bullet"></div>
-                  <div class="steps__bullet"></div>
                   <div class="steps__bullet"></div>
               </div>
             </div>
             <form (ngSubmit)="logForm()">
 
               <ion-grid>
+
+                <ion-row>
+                  <ion-col col-auto class="uploadImage">
+                    <div>
+                      <a href="#" *ngIf="!base64Image" (click)="openImageLoader()">Upload Image</a>
+                      <img [src]="base64Image" *ngIf="base64Image" (click)="openImageLoader()">
+                    </div>
+                  </ion-col>
+                </ion-row>
+
+
                 <ion-row radio-group>
 
-                  <ion-col col-12>
-                    <div class="radio">
+                  <ion-col col-auto>
+                    <!-- <div class="radio">
 
                     <ion-radio checked="true" value="male" float class="radio-custom"></ion-radio>
                     <ion-label class="radio__label" value="male">Male </ion-label>
@@ -32,8 +49,17 @@
                     </ion-radio>
                     <ion-label class="radio__label">Female</ion-label>
 
-                  </div>
-
+                  </div> -->
+                  <ion-list radio-group class="radio">
+                    <ion-item>
+                      <ion-label>Male</ion-label>
+                      <ion-radio value="male" checked></ion-radio>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label>Female</ion-label>
+                      <ion-radio value="female"></ion-radio>
+                    </ion-item>
+                  </ion-list>
 
                    </ion-col>
                 </ion-row>

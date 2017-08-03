@@ -27,6 +27,8 @@ import { ProfilePage } from '../pages/profile/profile';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
+
   isVisible = false;
   @ViewChild(Nav) nav: Nav;
 
@@ -37,6 +39,7 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private alertCtrl: AlertController, private callNumber: CallNumber, private emailComposer: EmailComposer, private menuCtrl :MenuController) {
     this.initializeApp();
+
 
 
     // used for an example of ngFor and navigation
@@ -150,7 +153,6 @@ export class MyApp {
         buttons: [
           {
             text: 'Call info line',
-            role: 'cancel',
             handler: () => {
               this.callNumber.callNumber("18001010101", true)
                 .then(() => console.log('Launched dialer!'))

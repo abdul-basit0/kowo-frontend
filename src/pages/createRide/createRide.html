@@ -4,6 +4,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <img src="assets/image/logo.png" alt="main-icon" class="sideBarIc">
   </ion-navbar>
 </ion-header>
 
@@ -150,10 +151,10 @@
 
 
 
-        <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
+        <ion-icon name="md-remove" (click)="DecDetour()" class="iconLeftMinus"></ion-icon>
 
-        <ion-input type="text" placeholder="15" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
-        <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
+        <ion-input type="text" placeholder="15" class="inputRange" [(ngModel)]="detourTime" disabled></ion-input>
+        <ion-icon name="md-add" (click)="IncDetour()" class="iconRightPlus"></ion-icon>
 
 
       </ion-col>
@@ -162,12 +163,12 @@
       <ion-col col-6 class="geo">
 
 
-        <ion-icon name="md-remove" class="iconLeftMinus"></ion-icon>
+        <ion-icon name="md-remove" (click)="DecSeats()" class="iconLeftMinus"></ion-icon>
 
-        <ion-input type="text" placeholder="3" class="inputRange" [(ngModel)]="homeAddress" disabled></ion-input>
+        <ion-input type="text" placeholder="1" class="inputRange" [(ngModel)]="totalSeats" disabled></ion-input>
 
 
-        <ion-icon name="md-add" class="iconRightPlus"></ion-icon>
+        <ion-icon name="md-add" (click)="IncSeats()"  class="iconRightPlus"></ion-icon>
 
       </ion-col>
 

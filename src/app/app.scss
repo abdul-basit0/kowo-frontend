@@ -1,9 +1,53 @@
+$mainColor: #4ac7cc;
 body {
   .fixed-content {
     margin-top: 0 !important;
     background-image: url('../assets/image/background.png');
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .uploadImage {
+    text-align: center !important;
+
+    div {
+      // display: inline-block;
+      // border-radius: 50%;
+      // background: $mainColor;
+      // padding: 10% 1%;
+      // margin: 7px;
+      &:hover {
+        cursor: pointer !important;
+      }
+
+      a {
+        text-decoration: none;
+        line-height: 9em;
+        font-size: 10px;
+        padding: 35px 0;
+        color: #fff;
+        border-radius: 50%;
+        background: $mainColor;
+      }
+
+      img {
+        display: inline-block;
+        border-radius: 50%;
+        background: $mainColor;
+        width: 70px;
+        height: 70px;
+        margin: 7px;
+      }
+    }
+  }
+  .sideBarIc {
+    width: 100px;
+    position: absolute;
+    top: 5px;
+    left: 45%;
+
+      @media only screen and (max-width: 480px){
+          left: 35%;
+    }
   }
 
   .scroll-content {
@@ -69,7 +113,6 @@ body {
     color: #fff !important;
   }
 
-
   .contactPopup {
     font-family: 'ubuntulight', sans-serif;
     letter-spacing: 0.8px;
@@ -100,7 +143,6 @@ body {
         span {
           color: #fff;
           justify-content: center !important;
-
         }
       }
     }
