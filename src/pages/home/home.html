@@ -1,8 +1,10 @@
 <ion-header>
-  <ion-navbar> <!-- color = "red"-->
+  <ion-navbar>
+    <!-- color = "red"-->
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <span class="notificationBubble">0</span>
   </ion-navbar>
 </ion-header>
 
@@ -12,7 +14,7 @@
       <img src="assets/image/logo.png" alt="main-icon">
     </div>
 
-    <div class="dashboardBox" *ngFor = "let p of dashboardItems">
+    <div class="dashboardBox" *ngFor="let p of dashboardItems">
       <a href="#">
         <div class="box">
           <i class="{{p.image + ' kowoIconFamily'}}"></i>
@@ -33,19 +35,20 @@
 </ion-content>
 
 <ion-pullup (onExpand)="footerExpanded()" (onCollapse)="footerCollapsed()" [(state)]="footerState" ng-cancel-drag="false">
-    <ion-pullup-tab [footer]="pullup" (tap)="toggleFooter()">
-      <ion-icon name="ios-arrow-up-outline" *ngIf="footerState == 0"><span>My Matched Rides</span></ion-icon><ion-icon name="ios-arrow-down-outline" *ngIf="footerState == 1"><span>My Matched Rides</span></ion-icon>
-    </ion-pullup-tab>
-    <!-- <ion-toolbar color="primary" (tap)="toggleFooter()">
+  <ion-pullup-tab [footer]="pullup" (tap)="toggleFooter()">
+    <ion-icon name="ios-arrow-up-outline" *ngIf="footerState == 0"><span>My Matched Rides</span></ion-icon>
+    <ion-icon name="ios-arrow-down-outline" *ngIf="footerState == 1"><span>My Matched Rides</span></ion-icon>
+  </ion-pullup-tab>
+  <!-- <ion-toolbar color="primary" (tap)="toggleFooter()">
       <ion-title>My Matched Rides</ion-title>
     </ion-toolbar> -->
-    <ion-content padding>
-      <div class="noRides">
-        <span>Call</span>
-        <a><img src="assets/image/axa-btn.png" alt="Axa Call"></a>
-        <p class="notRidesFound">You Don't See to have any rides planned at the moment!</p>
-        <p>Changing your preferences might help you to match you!</p>
-        <button >Change Preferences</button>
-      </div>
-    </ion-content>
-  </ion-pullup>
+  <ion-content padding>
+    <div class="noRides">
+      <span>Call</span>
+      <a><img src="assets/image/axa-btn.png" alt="Axa Call"></a>
+      <p class="notRidesFound">You Don't See to have any rides planned at the moment!</p>
+      <p>Changing your preferences might help you to match you!</p>
+      <button>Change Preferences</button>
+    </div>
+  </ion-content>
+</ion-pullup>

@@ -1,4 +1,5 @@
 $mainColor: #4ac7cc;
+
 body {
   .fixed-content {
     margin-top: 0 !important;
@@ -6,6 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   .uploadImage {
     text-align: center !important;
 
@@ -39,14 +41,44 @@ body {
       }
     }
   }
+
+  ion-navbar {
+    position: relative;
+
+    .notificationBubble {
+      font-family: 'ubuntulight', sans-serif;
+      letter-spacing: 0.8px;
+      color: #fff;
+      position: absolute;
+      left: 43px;
+      background: #ffc900;
+      top: 9px;
+      border-radius: 27px;
+      padding: 3px 8px 3px 6px;
+    }
+  }
+
+  ion-label {
+    .notificationBubble {
+      font-family: 'ubuntulight', sans-serif;
+      letter-spacing: 0.8px;
+      color: #fff;
+      position: absolute;
+      top: 4px;
+      left: 53px;
+      background: #ffc900;
+      border-radius: 27px;
+      padding: 3px 8px 3px 6px;
+    }
+  }
+
   .sideBarIc {
     width: 100px;
     position: absolute;
     top: 5px;
     left: 45%;
-
-      @media only screen and (max-width: 480px){
-          left: 35%;
+    @media only screen and (max-width: 480px) {
+      left: 35%;
     }
   }
 

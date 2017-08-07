@@ -3,6 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+      <span class="notificationBubble">0</span>
           <img src="assets/image/logo.png" alt="main-icon" class="sideBarIc">
   </ion-navbar>
 </ion-header>
@@ -95,7 +96,7 @@
       <ion-row class="rowAlign" >
         <ion-col col-12 class="geo workArrivalTimePicker">
           <label class="label_time">I begin work at</label>
-          <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+          <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm g"></ion-datetime>
           <i class="icon-edit kowoIconFamily timeIconRight"></i>
         </ion-col>
       </ion-row>
@@ -103,7 +104,7 @@
       <ion-row class="rowAlign" >
         <ion-col col-12 class="geo workArrivalTimePicker">
           <label class="label_time">I leave work at</label>
-          <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+          <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm g"></ion-datetime>
           <i class="icon-edit kowoIconFamily timeIconRight"></i>
         </ion-col>
       </ion-row>
@@ -147,7 +148,7 @@
         <ion-col col-md-12>
           <ion-item>
             <ion-label>Sync rides with my calendar</ion-label>
-            <ion-toggle [(ngModel)]="syncCalendar"></ion-toggle>
+            <ion-toggle class="calenderSyncToggle" [(ngModel)]="syncCalendar"></ion-toggle>
           </ion-item>
         </ion-col>
       </ion-row>

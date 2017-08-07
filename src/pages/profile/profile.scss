@@ -13,8 +13,9 @@ page-profile {
     color: #fff;
     margin: 0 0 10px !important;
   }
+
   ion-col {
-        padding-right: 0;
+    padding-right: 0;
   }
 
   .item-md {
@@ -34,7 +35,35 @@ page-profile {
     border-bottom: none !important;
   }
 
+  .calenderSyncToggle {
+    width: 50px;
+    height: 31px;
 
+    .toggle-inner {
+      width: 27px;
+      height: 27px;
+      background-color: #fff !important;
+      border: 2px solid #2a7a7d;
+      top: 0 !important;
+    }
+
+    .toggle-icon {
+      border: solid 2px #e6e6e6;
+      background-color: #fff;
+    }
+  }
+
+  .calenderSyncToggle.toggle-checked {
+    .toggle-icon {
+      background-color: #2a7a7d;
+      border-color: #2a7a7d;
+    }
+
+    .toggle-inner {
+      -webkit-transform: translate3d(21px, 0, 0);
+      transform: translate3d(21px, 0, 0);
+    }
+  }
 
   .dropDownMen {
     color: #fff;
@@ -118,6 +147,7 @@ page-profile {
   .rowAlign {
     margin-bottom: 10px;
   }
+
   .customIcon {
     text-align: center;
     margin-top: 0.9%;
@@ -212,7 +242,7 @@ page-profile {
   .workArrivalTimePicker {
     display: table;
     width: 100%;
-        margin: 4px;
+    margin: 4px;
 
     .label_time,
     .timeIconRight,
@@ -227,13 +257,14 @@ page-profile {
 
     .timeIconRight {
       float: right;
-          vertical-align: middle;
-          font-size: 0.9em;
-        color: white;
+      vertical-align: middle;
+      font-size: 0.9em;
+      color: white;
     }
+
     .label_time {
       color: #2a7a7d;
-          width: 47%;
+      width: 47%;
     }
 
     .datetime-text {

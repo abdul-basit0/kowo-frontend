@@ -12,8 +12,9 @@
           <div class="sidemenuIcons">
             <i class="{{p.image + ' kowoIconFamily'}}"></i>
           </div>
+
           <p [innerHtml]="p.title" class="menuItemTitle"></p>
-            <div class="notificationBubble" *ngIf="p.component===InboxPage">
+            <div class="notificationBubble" *ngIf="p.title==='My Inbox'">
               <span>0</span>
             </div>
 
