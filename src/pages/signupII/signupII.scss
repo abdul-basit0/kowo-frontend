@@ -16,6 +16,36 @@ page-signupII {
     margin-bottom: 20px !important;
     margin-top: 10px !important;
   }
+  .steps__bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #4ac7cc;
+    background-color: #fff;
+    margin: 0 5px;
+  }
+
+  .steps__bullet.active {
+    background-color: #4ac7cc;
+  }
+  .justify--center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .flex--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
   h2,
   h3,

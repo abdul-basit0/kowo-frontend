@@ -18,6 +18,7 @@ import { createRidePage } from '../pages/createRide/createRide';
 import { InboxDetailPage } from '../pages/inboxDetails/inboxDetails';
 import { SendEvidencePage } from '../pages/sendEvidence/sendEvidence';
 import { viewRidesPage } from '../pages/viewRides/viewRides';
+import { MapPage } from '../pages/map/map';
 
 import { RatingPage } from '../pages/rating/rating';
 
@@ -45,7 +46,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       {
-        title: 'Create A Ride', component: AuthPage, image: 'icon-driver', child: [{
+        title: 'Create A Ride', component: MapPage, image: 'icon-driver', child: [{
           name: '',
           link: ''
         }]

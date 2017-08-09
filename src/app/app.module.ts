@@ -17,6 +17,7 @@ import { SendEvidencePage } from '../pages/sendEvidence/sendEvidence';
 import { viewRidesPage } from '../pages/viewRides/viewRides';
 import { CallNumber } from '@ionic-native/call-number';
 import { EmailComposer } from '@ionic-native/email-composer';
+import { MapPage } from '../pages/map/map';
 
 // import { Router } from '@angular/router';
 
@@ -41,7 +42,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     InboxDetailPage,
     SendEvidencePage,
     viewRidesPage,
-    RatingPage
+    RatingPage,
+    MapPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     InboxDetailPage,
     SendEvidencePage,
     viewRidesPage,
-    RatingPage
+    RatingPage,
+    MapPage
   ],
   providers: [
     CallNumber,
