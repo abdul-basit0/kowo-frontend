@@ -25,16 +25,19 @@
         "@ionic-native/core": "3.10.2",
         "@ionic-native/email-composer": "^4.1.0",
         "@ionic-native/geolocation": "^3.13.1",
+        "@ionic-native/launch-navigator": "^4.1.0",
         "@ionic-native/native-geocoder": "^3.13.1",
         "@ionic-native/splash-screen": "3.10.2",
         "@ionic-native/status-bar": "3.10.2",
         "@ionic/storage": "2.0.1",
         "call-number": "^1.0.1",
         "cordova-android": "^6.2.3",
+        "cordova-plugin-actionsheet": "^2.3.3",
         "cordova-plugin-camera": "^2.2.0",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-console": "^1.0.5",
         "cordova-plugin-device": "^1.1.4",
+        "cordova-plugin-dialogs": "^1.3.3",
         "cordova-plugin-email-composer": "^0.8.7",
         "cordova-plugin-geolocation": "^2.4.3",
         "cordova-plugin-nativegeocoder": "^1.0.2",
@@ -49,6 +52,7 @@
         "node-sass": "^4.5.3",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
+        "uk.co.workingedge.phonegap.plugin.launchnavigator": "^4.0.3",
         "zone.js": "0.8.12"
     },
     "devDependencies": {
@@ -56,6 +60,7 @@
         "@ionic/cli-plugin-cordova": "1.4.1",
         "@ionic/cli-plugin-ionic-angular": "1.3.2",
         "@types/googlemaps": "^3.26.16",
+        "ionic": "^3.7.0",
         "typescript": "2.3.3"
     },
     "description": "An Ionic project",
@@ -71,7 +76,8 @@
             "cordova-plugin-geolocation": {},
             "cordova-plugin-nativegeocoder": {},
             "mx.ferreyra.callnumber": {},
-            "cordova-plugin-email-composer": {}
+            "cordova-plugin-email-composer": {},
+            "uk.co.workingedge.phonegap.plugin.launchnavigator": {}
         },
         "platforms": [
             "android"

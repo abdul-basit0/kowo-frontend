@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+ import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { InboxPage } from '../pages/inbox/inbox';
@@ -47,7 +49,12 @@ import { Geolocation } from '@ionic-native/geolocation';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {}, {
+      links: [
+        { component: HomePage, name: 'Home', segment: '' },
+        { component: InboxPage, name: 'Inbox', segment: 'inbox' , defaultHistory:[HomePage]}
+      ]
+    }),
     IonPullupModule
   ],
   bootstrap: [IonicApp],
@@ -69,13 +76,15 @@ import { Geolocation } from '@ionic-native/geolocation';
     MapPage
   ],
   providers: [
-    CallNumber,
-    EmailComposer,
-    StatusBar,
-    SplashScreen,
-    Geolocation,
-    NativeGeocoder,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  LaunchNavigator,
+  CallNumber,
+  EmailComposer,
+  StatusBar,
+  SplashScreen,
+  Geolocation,
+  NativeGeocoder,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: LocationStrategy, useClass: PathLocationStrategy}
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
